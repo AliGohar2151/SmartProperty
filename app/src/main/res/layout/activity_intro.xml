@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".intro_activity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/logo_anim"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/real_state_anim"
+            android:layout_marginTop="50dp"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:padding="16dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/round_corner_background"
+            android:elevation="10dp"
+            >
+
+            <TextView
+                android:id="@+id/txt_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Smart Property"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:fontFamily="@font/archivo_black"
+
+                />
+
+            <TextView
+                android:id="@+id/txt_slogan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_main"
+                android:text="Crafting Spaces, Shaping Lives."
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:fontFamily="@font/archivo"
+
+            />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/ThemeOverlay.Material3.Button.ElevatedButton"
+                android:id="@+id/intro_login_button"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/txt_slogan"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="@color/white"
+                android:elevation="10dp"
+                android:text="Login"
+                android:textColor="@color/primary"
+                android:textSize="20sp"
+                android:fontFamily="@font/archivo"
+
+                />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/intro_signup_button"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/intro_login_button"
+                android:layout_marginTop="10dp"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:text="Register"
+                android:textSize="20sp"
+                android:fontFamily="@font/archivo"
+                android:textColor="@color/white"
+                app:strokeColor="@color/white"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottom_nav_home"
+        android:title="Home"
+        android:icon="@drawable/ic_homeicon"
+
+        />
+    <item
+        android:id="@+id/bottom_nav_projects"
+        android:title="Projects"
+        android:icon="@drawable/ic_projects"
+
+        />
+    <item
+        android:title="Home"
+        android:icon="@drawable/homeicon"
+
+        />
+    <item
+        android:title="Home"
+        android:icon="@drawable/homeicon"
+
+        />
+    <item
+        android:title="Home"
+        android:icon="@drawable/homeicon"
+
+        />
+</menu>

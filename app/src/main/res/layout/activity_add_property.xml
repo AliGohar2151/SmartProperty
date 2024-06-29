@@ -1,0 +1,927 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".add_property_activity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        >
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            app:title="Post an Ad"
+            app:expandedTitleTextColor="#00FFFFFF"
+            app:contentScrim="@color/primary2"
+            android:background="@drawable/addproperty_background"
+            app:collapsedTitleTextColor="@color/white"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp"
+                >
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Post an Ad"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:layout_marginTop="70dp"
+                    android:fontFamily="@font/archivo"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Reach Thousands of buyers\n around the country."
+                    android:textColor="@color/primary"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/archivo"
+                    />
+
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/primary2"
+                app:navigationIcon="@drawable/arrowback"
+                app:layout_collapseMode="pin"
+                />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Purpose"
+            android:textSize="18sp"
+            android:fontFamily="@font/archivo"
+            android:textColor="@color/black" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/purpose_chip_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:singleSelection="true"
+            android:layout_marginTop="5dp"
+            android:padding="5dp">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/rent_chip"
+                android:layout_height="50dp"
+                android:layout_width="wrap_content"
+                app:textStartPadding="15dp"
+                app:textEndPadding="15dp"
+                android:minWidth="80dp"
+                android:textAlignment="center"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:text="Rent Out"
+                android:textColor="@color/chip_text_color"
+                android:textSize="16sp"
+                android:checkable="true"
+                app:chipStrokeColor="@color/chip_stroke_color"
+                app:chipStrokeWidth="1dp"
+                android:checked="true"
+                app:chipBackgroundColor="@color/chip_backgroundcolor"
+                app:checkedIconVisible="false" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/sell_chip"
+                android:layout_height="50dp"
+                android:layout_width="wrap_content"
+                app:textStartPadding="15dp"
+                app:textEndPadding="15dp"
+                android:minWidth="80dp"
+                android:textAlignment="center"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:text="Sell"
+                android:textColor="@color/chip_text_color"
+                android:textSize="16sp"
+                android:checkable="true"
+                app:chipBackgroundColor="@color/chip_backgroundcolor"
+                app:chipStrokeColor="@color/chip_stroke_color"
+                app:chipStrokeWidth="1dp"
+                app:checkedIconVisible="false" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Property Type"
+            android:textSize="18sp"
+            android:fontFamily="@font/archivo"
+            android:layout_marginTop="10dp" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/select_type_chip_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:singleSelection="true"
+            android:layout_marginTop="5dp"
+            android:padding="5dp">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/homes_chip"
+                android:layout_height="50dp"
+                android:layout_width="wrap_content"
+                app:textStartPadding="15dp"
+                app:textEndPadding="15dp"
+                android:minWidth="80dp"
+                android:textAlignment="center"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:text="Homes"
+                android:textColor="@color/chip_text_color"
+                android:textSize="16sp"
+                android:checkable="true"
+                app:chipStrokeColor="@color/chip_stroke_color"
+                app:chipStrokeWidth="1dp"
+                android:checked="true"
+                app:chipBackgroundColor="@color/chip_backgroundcolor"
+                app:checkedIconVisible="false" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/plots_chip"
+                android:layout_height="50dp"
+                android:layout_width="wrap_content"
+                app:textStartPadding="15dp"
+                app:textEndPadding="15dp"
+                android:minWidth="80dp"
+                android:textAlignment="center"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:text="Plots"
+                android:textColor="@color/chip_text_color"
+                android:textSize="16sp"
+                android:checkable="true"
+                app:chipBackgroundColor="@color/chip_backgroundcolor"
+                app:chipStrokeColor="@color/chip_stroke_color"
+                app:chipStrokeWidth="1dp"
+                app:checkedIconVisible="false" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/commercial_chip"
+                android:layout_height="50dp"
+                android:layout_width="wrap_content"
+                app:textStartPadding="15dp"
+                app:textEndPadding="15dp"
+                android:minWidth="80dp"
+                android:textAlignment="center"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:text="Commercial"
+                android:textColor="@color/chip_text_color"
+                android:textSize="16sp"
+                android:checkable="true"
+                app:chipBackgroundColor="@color/chip_backgroundcolor"
+                app:chipStrokeColor="@color/chip_stroke_color"
+                app:chipStrokeWidth="1dp"
+                app:checkedIconVisible="false" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="60dp"
+            android:layout_marginStart="60dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/homes_type_chip_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:visibility="visible"
+                app:chipSpacingVertical="-4dp"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/house_chip"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:checkable="true"
+                    android:checked="true"
+                    android:minWidth="80dp"
+                    android:text="House"
+                    android:textAlignment="center"
+                    android:textColor="@color/chip_text_color"
+                    android:textSize="16sp"
+                    app:checkedIconVisible="false"
+                    app:chipBackgroundColor="@color/chip_backgroundcolor"
+                    app:chipStrokeColor="@color/chip_stroke_color"
+                    app:chipStrokeWidth="1dp"
+                    app:textEndPadding="15dp"
+                    app:textStartPadding="15dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/room_chip"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:checkable="true"
+                    android:minWidth="80dp"
+                    android:text="Room"
+                    android:textAlignment="center"
+                    android:textColor="@color/chip_text_color"
+                    android:textSize="16sp"
+                    app:checkedIconVisible="false"
+                    app:chipBackgroundColor="@color/chip_backgroundcolor"
+                    app:chipStrokeColor="@color/chip_stroke_color"
+                    app:chipStrokeWidth="1dp"
+                    app:textEndPadding="15dp"
+                    app:textStartPadding="15dp" />
+
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/upperportion_chip"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:checkable="true"
+                    android:minWidth="80dp"
+                    android:text="Upper Portion"
+                    android:textAlignment="center"
+                    android:textColor="@color/chip_text_color"
+                    android:textSize="16sp"
+                    app:checkedIconVisible="false"
+                    app:chipBackgroundColor="@color/chip_backgroundcolor"
+                    app:chipStrokeColor="@color/chip_stroke_color"
+                    app:chipStrokeWidth="1dp"
+                    app:textEndPadding="15dp"
+                    app:textStartPadding="15dp" />
+
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/lowerportion_chip"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:checkable="true"
+                    android:minWidth="80dp"
+                    android:text="Lower Portion"
+                    android:textAlignment="center"
+                    android:textColor="@color/chip_text_color"
+                    android:textSize="16sp"
+                    app:checkedIconVisible="false"
+                    app:chipBackgroundColor="@color/chip_backgroundcolor"
+                    app:chipStrokeColor="@color/chip_stroke_color"
+                    app:chipStrokeWidth="1dp"
+                    app:textEndPadding="15dp"
+                    app:textStartPadding="15dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/flat_chip"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:checkable="true"
+                    android:minWidth="80dp"
+                    android:text="Flat"
+                    android:textAlignment="center"
+                    android:textColor="@color/chip_text_color"
+                    android:textSize="16sp"
+                    app:checkedIconVisible="false"
+                    app:chipBackgroundColor="@color/chip_backgroundcolor"
+                    app:chipStrokeColor="@color/chip_stroke_color"
+                    app:chipStrokeWidth="1dp"
+                    app:textEndPadding="15dp"
+                    app:textStartPadding="15dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/farmhouse_chip"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:checkable="true"
+                    android:minWidth="80dp"
+                    android:text="Farm House"
+                    android:textAlignment="center"
+                    android:textColor="@color/chip_text_color"
+                    android:textSize="16sp"
+                    app:checkedIconVisible="false"
+                    app:chipBackgroundColor="@color/chip_backgroundcolor"
+                    app:chipStrokeColor="@color/chip_stroke_color"
+                    app:chipStrokeWidth="1dp"
+                    app:textEndPadding="15dp"
+                    app:textStartPadding="15dp" />
+
+
+            </com.google.android.material.chip.ChipGroup>
+
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/plots_type_chip_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:visibility="gone"
+                app:chipSpacingVertical="-4dp"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/residentialplot_chip"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:checkable="true"
+                    android:checked="true"
+                    android:minWidth="80dp"
+                    android:text="Residential"
+                    android:textAlignment="center"
+                    android:textColor="@color/chip_text_color"
+                    android:textSize="16sp"
+                    app:checkedIconVisible="false"
+                    app:chipBackgroundColor="@color/chip_backgroundcolor"
+                    app:chipStrokeColor="@color/chip_stroke_color"
+                    app:chipStrokeWidth="1dp"
+                    app:textEndPadding="15dp"
+                    app:textStartPadding="15dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/commercialplot_chip"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:checkable="true"
+                    android:minWidth="80dp"
+                    android:text="Commercial"
+                    android:textAlignment="center"
+                    android:textColor="@color/chip_text_color"
+                    android:textSize="16sp"
+                    app:checkedIconVisible="false"
+                    app:chipBackgroundColor="@color/chip_backgroundcolor"
+                    app:chipStrokeColor="@color/chip_stroke_color"
+                    app:chipStrokeWidth="1dp"
+                    app:textEndPadding="15dp"
+                    app:textStartPadding="15dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/plotfile_chip"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:checkable="true"
+                    android:minWidth="80dp"
+                    android:text="Plot File"
+                    android:textAlignment="center"
+                    android:textColor="@color/chip_text_color"
+                    android:textSize="16sp"
+                    app:checkedIconVisible="false"
+                    app:chipBackgroundColor="@color/chip_backgroundcolor"
+                    app:chipStrokeColor="@color/chip_stroke_color"
+                    app:chipStrokeWidth="1dp"
+                    app:textEndPadding="15dp"
+                    app:textStartPadding="15dp" />
+
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/agriculturalland_chip"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:checkable="true"
+                    android:minWidth="80dp"
+                    android:text="Agricultural Land"
+                    android:textAlignment="center"
+                    android:textColor="@color/chip_text_color"
+                    android:textSize="16sp"
+                    app:checkedIconVisible="false"
+                    app:chipBackgroundColor="@color/chip_backgroundcolor"
+                    app:chipStrokeColor="@color/chip_stroke_color"
+                    app:chipStrokeWidth="1dp"
+                    app:textEndPadding="15dp"
+                    app:textStartPadding="15dp" />
+
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/industrialland_chip"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:checkable="true"
+                    android:minWidth="80dp"
+                    android:text="Industrial Land"
+                    android:textAlignment="center"
+                    android:textColor="@color/chip_text_color"
+                    android:textSize="16sp"
+                    app:checkedIconVisible="false"
+                    app:chipBackgroundColor="@color/chip_backgroundcolor"
+                    app:chipStrokeColor="@color/chip_stroke_color"
+                    app:chipStrokeWidth="1dp"
+                    app:textEndPadding="15dp"
+                    app:textStartPadding="15dp" />
+            </com.google.android.material.chip.ChipGroup>
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/commercial_type_chip_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:visibility="gone"
+                app:chipSpacingVertical="-4dp"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/office_chip"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:checkable="true"
+                    android:checked="true"
+                    android:minWidth="80dp"
+                    android:text="Office"
+                    android:textAlignment="center"
+                    android:textColor="@color/chip_text_color"
+                    android:textSize="16sp"
+                    app:checkedIconVisible="false"
+                    app:chipBackgroundColor="@color/chip_backgroundcolor"
+                    app:chipStrokeColor="@color/chip_stroke_color"
+                    app:chipStrokeWidth="1dp"
+                    app:textEndPadding="15dp"
+                    app:textStartPadding="15dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/shop_chip"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:checkable="true"
+                    android:minWidth="80dp"
+                    android:text="Shop"
+                    android:textAlignment="center"
+                    android:textColor="@color/chip_text_color"
+                    android:textSize="16sp"
+                    app:checkedIconVisible="false"
+                    app:chipBackgroundColor="@color/chip_backgroundcolor"
+                    app:chipStrokeColor="@color/chip_stroke_color"
+                    app:chipStrokeWidth="1dp"
+                    app:textEndPadding="15dp"
+                    app:textStartPadding="15dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/warehouse_chip"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:checkable="true"
+                    android:minWidth="80dp"
+                    android:text="Ware House"
+                    android:textAlignment="center"
+                    android:textColor="@color/chip_text_color"
+                    android:textSize="16sp"
+                    app:checkedIconVisible="false"
+                    app:chipBackgroundColor="@color/chip_backgroundcolor"
+                    app:chipStrokeColor="@color/chip_stroke_color"
+                    app:chipStrokeWidth="1dp"
+                    app:textEndPadding="15dp"
+                    app:textStartPadding="15dp" />
+
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/factory_chip"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:checkable="true"
+                    android:minWidth="80dp"
+                    android:text="Factory"
+                    android:textAlignment="center"
+                    android:textColor="@color/chip_text_color"
+                    android:textSize="16sp"
+                    app:checkedIconVisible="false"
+                    app:chipBackgroundColor="@color/chip_backgroundcolor"
+                    app:chipStrokeColor="@color/chip_stroke_color"
+                    app:chipStrokeWidth="1dp"
+                    app:textEndPadding="15dp"
+                    app:textStartPadding="15dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/other_chip"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:checkable="true"
+                    android:minWidth="80dp"
+                    android:text="Other"
+                    android:textAlignment="center"
+                    android:textColor="@color/chip_text_color"
+                    android:textSize="16sp"
+                    app:checkedIconVisible="false"
+                    app:chipBackgroundColor="@color/chip_backgroundcolor"
+                    app:chipStrokeColor="@color/chip_stroke_color"
+                    app:chipStrokeWidth="1dp"
+                    app:textEndPadding="15dp"
+                    app:textStartPadding="15dp" />
+
+            </com.google.android.material.chip.ChipGroup>
+        </LinearLayout>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:hint="City"
+            app:boxStrokeColor="@color/edit_text_stroke"
+            app:hintTextColor="@color/hint_stroke"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/buttomsheet_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/primary"
+                android:drawableEnd="@drawable/ic_arrowforward"
+                android:clickable="true"
+                android:focusable="false"
+                android:drawableTint="@color/primary"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            app:boxStrokeColor="@color/edit_text_stroke"
+            android:hint="Location"
+            app:hintTextColor="@color/hint_stroke"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5"
+            android:layout_marginTop="5dp"
+           >
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:hint="Area Size"
+                app:boxStrokeColor="@color/edit_text_stroke"
+                app:hintTextColor="@color/hint_stroke"
+                android:layout_marginEnd="5dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:hintTextColor="@color/hint_stroke"
+                    android:inputType="numberDecimal"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:layout_marginStart="2dp"
+                app:boxStrokeColor="@color/edit_text_stroke"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:hint="type"
+                app:hintTextColor="@color/hint_stroke"
+                >
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:simpleItems="@array/area_size"
+                    android:focusable="false"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                     />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/installments_switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Installments"
+            android:paddingStart="10dp"
+            android:textSize="16sp"
+            app:trackTint="@color/switch_color"
+            app:thumbTint="@color/primary"
+            />
+
+        <LinearLayout
+            android:id="@+id/installments_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            >
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                app:boxStrokeColor="@color/edit_text_stroke"
+                android:hint="Advance Amount"
+                app:hintTextColor="@color/hint_stroke"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                app:boxStrokeColor="@color/edit_text_stroke"
+                android:hint="Monthly Installments"
+                app:hintTextColor="@color/hint_stroke"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                app:boxStrokeColor="@color/edit_text_stroke"
+                android:hint="No. of Installments Remaining"
+                app:hintTextColor="@color/hint_stroke"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/possession_switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Ready for Possession"
+            android:paddingStart="10dp"
+            android:textSize="16sp"
+            app:trackTint="@color/switch_color"
+            app:thumbTint="@color/primary"
+            />
+
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            app:boxStrokeColor="@color/edit_text_stroke"
+            android:hint="No. of Rooms"
+            app:hintTextColor="@color/hint_stroke"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            app:boxStrokeColor="@color/edit_text_stroke"
+            android:hint="No. of Bathrooms"
+            app:hintTextColor="@color/hint_stroke"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:hint="Property Title"
+            app:boxStrokeColor="@color/edit_text_stroke"
+            app:hintTextColor="@color/hint_stroke">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            app:boxStrokeColor="@color/edit_text_stroke"
+            android:hint="Property Description"
+            app:hintTextColor="@color/hint_stroke"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:boxStrokeColor="@color/edit_text_stroke"
+            android:hint="Email"
+            app:hintTextColor="@color/hint_stroke"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:boxStrokeColor="@color/edit_text_stroke"
+            app:prefixText="+92"
+            app:counterEnabled="true"
+            app:counterMaxLength="10"
+            app:startIconDrawable="@drawable/callicon"
+            app:hintTextColor="@color/hint_stroke">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Phone Number"
+                android:maxLength="10"
+                android:paddingStart="50dp"
+                android:imeOptions="actionNext"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/pick_images_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Select Images"
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:backgroundTint="@color/primary2"
+            android:textColor="@color/primary"
+            />
+
+        <LinearLayout
+            android:id="@+id/image_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical" >
+            <ImageView
+                android:id="@+id/image_gallery"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/placeholder"
+                android:scaleType="centerCrop"
+                />
+        </LinearLayout>
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:backgroundTint="@color/primary2"
+                style="@style/Widget.Material3.Button.ElevatedButton"
+                android:text="Post AD"
+                app:strokeColor="@color/primary"
+                strokeWidth="1dp"
+                android:textColor="@color/primary" />
+            />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Save as Draft"
+                android:textSize="18sp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/archivo"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
