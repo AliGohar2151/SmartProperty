@@ -1,9 +1,12 @@
 package com.example.smartproperty;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -24,6 +27,7 @@ public class projects_fragment extends Fragment {
     private RecyclerView recyclerView;
     private projects_adapter adapter;
     private List<projects_model> projectsList;
+    Context context;
 
     public projects_fragment() {
         // Required empty public constructor
@@ -37,7 +41,11 @@ public class projects_fragment extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
-
+@Override
+    public void onAttach(@NonNull Context context){
+        super.onAttach(context);
+        this.context=context;
+    }
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,7 +58,7 @@ public class projects_fragment extends Fragment {
         projectsList = generateRandomProjects(10); // Change 10 to the number of items you want
 
         // Adapter initialization and setup
-        adapter = new projects_adapter(projectsList);
+         adapter = new projects_adapter(context,projectsList);
     }
 
     @Override
@@ -86,7 +94,7 @@ public class projects_fragment extends Fragment {
 
         String[] descriptions = {
                 "Beautifully designed apartment with panoramic views of the city skyline.",
-                "Large villa featuring multiple bedrooms, garden, and swimming pool, 6 bed rooms with attache bathroom.",
+            "Large villa featuring multiple bedrooms, garden, and swimming pool, 6 bed rooms with attache bathroom.",
                 "Newly built townhouse with modern amenities and private garage.",
                 "Compact studio apartment perfect for young professionals.",
                 "Ideal family home with spacious rooms and close proximity to schools.",

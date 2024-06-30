@@ -21,7 +21,7 @@
             android:elevation="10dp"
             app:navigationIcon="@drawable/arrowback"
             app:titleTextColor="@color/white"
-            app:title="New Property" />
+            app:title="Property Details" />
 
     </com.google.android.material.appbar.AppBarLayout>
     <ScrollView
@@ -35,18 +35,21 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         >
+
+
         <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            app:cardCornerRadius="10dp"
+            app:cardCornerRadius="16dp"
             android:elevation="16dp"
             android:layout_margin="16dp"
             >
-            <ImageView
+            <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+                android:id="@+id/image_carousel"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/project_placeholder"
-                android:scaleType="centerCrop"
+                android:layout_height="300dp"
+                app:showNavigationButtons="false"
                 />
 
         </androidx.cardview.widget.CardView>
@@ -58,6 +61,7 @@
             android:padding="16dp"
             >
             <TextView
+                android:id="@+id/txt_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Historic Mansion with Landscaped Gardens"
@@ -67,6 +71,7 @@
                 android:textStyle="bold"
                 />
             <TextView
+                android:id="@+id/txt_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Large villa featuring multiple bedrooms, garden, and swimming pool, 6 bed rooms with attache bathroom."
@@ -215,16 +220,16 @@
                     android:textSize="16sp"
                     android:layout_marginRight="5dp"
                     />
+
                 <TextView
                     android:id="@+id/property_type"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/archivo"
                     android:text="Upper Portion"
                     android:textColor="@color/black"
-                    android:fontFamily="@font/archivo"
-                    android:textStyle="bold"
                     android:textSize="16sp"
-                    />
+                    android:textStyle="normal" />
             </LinearLayout>
 
             <LinearLayout
@@ -242,16 +247,16 @@
                     android:textStyle="bold"
                     android:textSize="18sp"
                     />
+
                 <TextView
                     android:id="@+id/property_area"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/archivo"
                     android:text="17.5"
                     android:textColor="@color/black"
-                    android:fontFamily="@font/archivo"
-                    android:textStyle="bold"
                     android:textSize="16sp"
-                    />
+                    android:textStyle="normal" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -262,16 +267,16 @@
                     android:textSize="16sp"
                     android:layout_marginRight="5dp"
                     />
+
                 <TextView
                     android:id="@+id/property_area_type"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/archivo"
                     android:text="Marla"
                     android:textColor="@color/black"
-                    android:fontFamily="@font/archivo"
-                    android:textStyle="bold"
                     android:textSize="16sp"
-                    />
+                    android:textStyle="normal" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -288,17 +293,136 @@
                     android:textStyle="bold"
                     android:textSize="18sp"
                     />
+
                 <TextView
-                    android:id="@+id/property_area"
+                    android:id="@+id/rooms"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/archivo"
                     android:text="09"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No. of Bathrooms: "
                     android:textColor="@color/black"
                     android:fontFamily="@font/archivo"
                     android:textStyle="bold"
-                    android:textSize="16sp"
+                    android:textSize="18sp"
                     />
+
+                <TextView
+                    android:id="@+id/bathrooms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/archivo"
+                    android:text="02"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
             </LinearLayout>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email: "
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/archivo"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    />
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/archivo"
+                    android:text="user123@gmail.com"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phone: "
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/archivo"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    />
+
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/archivo"
+                android:text="+923128494878"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:gravity="end">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.Material3.Button.ElevatedButton"
+                    android:text="Message"
+                    app:icon="@drawable/messageicon"
+                    android:backgroundTint="@color/primary2"
+                    android:textColor="@color/primary"
+                    app:iconTint="@color/primary"
+                     />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.Material3.Button.ElevatedButton"
+                    android:text="Call"
+                    app:icon="@drawable/callicon"
+                    android:backgroundTint="@color/primary2"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    app:iconTint="@color/white" />
+
+
+            </LinearLayout>
+
 
         </LinearLayout>
     </LinearLayout>

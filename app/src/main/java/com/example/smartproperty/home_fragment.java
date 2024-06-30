@@ -9,6 +9,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.Toast;
+
+import com.google.android.material.search.SearchBar;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -64,8 +67,11 @@ public class home_fragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home_fragment, container, false);
 
 
+
+
         LinearLayout addPropertyButton = view.findViewById(R.id.add_property_button);
         LinearLayout yourPropertyButton=view.findViewById(R.id.your_property_button);
+
         addPropertyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -77,7 +83,7 @@ public class home_fragment extends Fragment {
         yourPropertyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(),your_property_activity.class);
+                Intent intent = new Intent(getActivity(),selected_property_activity.class);
                 startActivity(intent);
             }
         });

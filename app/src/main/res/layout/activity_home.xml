@@ -21,11 +21,11 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/primary"
+                android:background="@color/primary2"
                 android:elevation="10dp"
                 app:navigationIcon="@drawable/menuicon"
                 app:titleTextColor="@color/white"
-                app:title="@string/app_name" />
+                app:title="Smart Property" />
 
         </com.google.android.material.appbar.AppBarLayout>
 
@@ -40,10 +40,11 @@
             android:layout_width="match_parent"
             app:itemActiveIndicatorStyle="@style/bottom_nav_indicator"
             android:layout_height="wrap_content"
-            android:background="@color/primary"
+            android:background="@color/primary2"
             app:itemIconTint="@color/white"
             app:itemTextColor="@color/white"
             app:labelVisibilityMode="labeled"
+            app:itemTextAppearanceActiveBoldEnabled="false"
             app:menu="@menu/buttom_nav_menu" />
 
     </LinearLayout>

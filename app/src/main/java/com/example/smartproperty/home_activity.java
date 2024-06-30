@@ -39,7 +39,7 @@ public class home_activity extends AppCompatActivity {
             Window window = getWindow();
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-            window.setStatusBarColor(getResources().getColor(R.color.primary));
+            window.setStatusBarColor(getResources().getColor(R.color.primary2));
         }
 
         MaterialToolbar toolbar = findViewById(R.id.toolbar);
@@ -71,11 +71,11 @@ public class home_activity extends AppCompatActivity {
                 if (itemId == R.id.nav_home) {
                     fragment = new home_fragment();
                     bottomNavigationView.setSelectedItemId(R.id.bottom_nav_home);
-                    toolbar.setTitle(R.string.app_name);
+                    toolbar.setTitle("Smart Property");
                 } else if (itemId == R.id.nav_projects) {
                     fragment = new projects_fragment();
                     bottomNavigationView.setSelectedItemId(R.id.bottom_nav_projects);
-                    toolbar.setTitle("Projects");
+                    toolbar.setTitle("New Properties");
                 } else if (itemId == R.id.nav_addproperty) {
                     Intent intent = new Intent(home_activity.this, add_property_activity.class);
                     startActivity(intent);
@@ -107,7 +107,7 @@ public class home_activity extends AppCompatActivity {
                 } else if (itemId == R.id.bottom_nav_projects) {
                     fragment = new projects_fragment();
                     navigationView.setCheckedItem(R.id.nav_projects);
-                    toolbar.setTitle("Projects");
+                    toolbar.setTitle("New Properties");
                 }
 
                 if (fragment != null) {

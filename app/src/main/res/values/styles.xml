@@ -2,7 +2,7 @@
 <resources>
 
     <style name="bottom_nav_indicator" parent="@style/Widget.Material3.BottomNavigationView.ActiveIndicator">
-        <item name="android:color">#81C4E4</item>
+        <item name="android:color">@color/primary</item>
     </style>
 
     <style name="expandedBarTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">

@@ -1,5 +1,7 @@
 package com.example.smartproperty;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,9 +14,13 @@ import java.util.List;
 
 public class projects_adapter extends RecyclerView.Adapter<projects_adapter.projects_viewholder> {
 
+
+    Context context;
     private  List<projects_model> projects_list;
 
-    public projects_adapter(List<projects_model> projects_list){
+    public projects_adapter(Context context, List<projects_model> projects_list){
+        this.context = context;
+
         this.projects_list=projects_list;
     }
 
@@ -34,6 +40,21 @@ public class projects_adapter extends RecyclerView.Adapter<projects_adapter.proj
         holder.demand.setText(project.getDemand());
         holder.location.setText(project.getLocation());
         holder.type.setText(project.getType());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(context,selected_property_activity.class);
+                intent.putExtra("title",project.getTitle());
+                intent.putExtra("description",project.getDescription());
+                intent.putExtra("demand",project.getDemand());
+                intent.putExtra("location",project.getLocation());
+                intent.putExtra("type",project.getType());
+                context.startActivity(intent);
+
+            }
+        });
+
     }
 
 
@@ -42,7 +63,7 @@ public class projects_adapter extends RecyclerView.Adapter<projects_adapter.proj
         return projects_list.size();
     }
 
-    public class projects_viewholder extends RecyclerView.ViewHolder {
+    public static class projects_viewholder extends RecyclerView.ViewHolder {
         TextView title;
         TextView description;
         TextView demand;

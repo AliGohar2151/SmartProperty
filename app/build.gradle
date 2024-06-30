@@ -42,4 +42,6 @@ dependencies {
     implementation libs.drawerlayout
     implementation libs.navigation.fragment
     implementation libs.navigation.ui
+    implementation libs.whynotimagecarousel
+
 }
