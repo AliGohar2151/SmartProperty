@@ -5,14 +5,17 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
     tools:context=".home_activity">
+
+
 
     <!-- Main content layout -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
-
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -20,15 +23,14 @@
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/primary2"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/white"
                 android:elevation="10dp"
                 app:navigationIcon="@drawable/menuicon"
-                app:titleTextColor="@color/white"
-                app:title="Smart Property" />
+                app:navigationIconTint="@color/secondary"
+                />
 
         </com.google.android.material.appbar.AppBarLayout>
-
         <FrameLayout
             android:id="@+id/frame_layout"
             android:layout_width="match_parent"
@@ -40,9 +42,9 @@
             android:layout_width="match_parent"
             app:itemActiveIndicatorStyle="@style/bottom_nav_indicator"
             android:layout_height="wrap_content"
-            android:background="@color/primary2"
-            app:itemIconTint="@color/white"
-            app:itemTextColor="@color/white"
+            app:itemIconTint="@color/nav_icon_tint"
+            app:itemTextColor="@color/secondary"
+            android:background="@color/white"
             app:labelVisibilityMode="labeled"
             app:itemTextAppearanceActiveBoldEnabled="false"
             app:menu="@menu/buttom_nav_menu" />
@@ -56,6 +58,11 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:headerLayout="@layout/nav_header"
-        app:menu="@menu/nav_menu" />
+        app:itemTextColor="@color/primary_text"
+        app:itemIconTint="@color/secondary"
+        app:itemShapeFillColor="@color/nav_item_color"
+        app:itemTextAppearanceActiveBoldEnabled="false"
+        app:menu="@menu/nav_menu"
+ />
 
 </androidx.drawerlayout.widget.DrawerLayout>

@@ -4,18 +4,38 @@
     android:layout_height="match_parent"
     android:padding="10dp"
     android:orientation="vertical"
-    android:backgroundTint="@color/background"
+    android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         >
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Find the\nBest Property"
+            android:textColor="@color/primary_text"
+            android:fontFamily="@font/roboto_bold"
+            android:padding="10dp"
+            android:layout_margin="5dp"
+            android:textSize="30sp"
+            />
+
+        <com.google.android.material.search.SearchBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/background"
+            android:hint="Search Property"
+
+            />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -26,16 +46,16 @@
             android:gravity="center">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/add_property_button"
                 android:layout_width="0dp"
                 android:layout_height="180dp"
                 android:layout_weight="1"
                 app:cardCornerRadius="10dp"
                 android:layout_margin="5dp"
-                android:backgroundTint="@color/primary"
+                android:backgroundTint="@color/secondary"
                 android:elevation="4dp">
 
                 <LinearLayout
-                    android:id="@+id/add_property_button"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
@@ -54,7 +74,7 @@
                         android:layout_height="wrap_content"
                         android:text="Add Property"
                         android:textColor="@color/white"
-                        android:fontFamily="@font/archivo_medium"
+                        android:fontFamily="@font/roboto_light"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         android:gravity="center"
@@ -78,6 +98,7 @@
                     android:layout_weight="1"
                     app:cardCornerRadius="10dp"
                     android:layout_margin="5dp"
+                    android:backgroundTint="@color/background"
                     android:elevation="4dp">
 
                     <LinearLayout
@@ -98,9 +119,8 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="5dp"
                             android:text="Your Properties"
-                            android:textColor="@color/primary"
-                            android:fontFamily="@font/archivo_medium"
-                            android:textStyle="bold"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto"
                             android:maxLines="2"
                             />
                     </LinearLayout>
@@ -114,6 +134,8 @@
                     android:layout_weight="1"
                     app:cardCornerRadius="10dp"
                     android:layout_margin="5dp"
+                    android:backgroundTint="@color/background"
+
                     android:elevation="4dp">
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -132,17 +154,15 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="5dp"
                             android:text="Find Agent"
-                            android:textColor="@color/primary"
-                            android:fontFamily="@font/archivo_medium"
-                            android:textStyle="bold"
+                            android:textColor="@color/primary_text"
+                            android:fontFamily="@font/roboto"
                             android:maxLines="2"
                             />
-                    </LinearLayout>                </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
             </LinearLayout>
         </LinearLayout>
-
-
 
     </LinearLayout>
     </ScrollView>

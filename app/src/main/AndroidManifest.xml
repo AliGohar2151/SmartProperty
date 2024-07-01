@@ -23,9 +23,11 @@
             android:exported="false" />
         <activity
             android:name=".add_property_activity"
+            android:theme="@style/Theme.darkTheme"
             android:exported="false" />
         <activity
             android:name=".home_activity"
+            android:theme="@style/Theme.lightTheme"
             android:exported="false" />
         <activity
             android:name=".signup_activity"

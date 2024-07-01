@@ -38,10 +38,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="10 Merla house for rent"
-            android:textColor="@color/primary"
-            android:fontFamily="@font/archivo_medium"
+            android:textColor="@color/primary_text"
+            android:fontFamily="@font/roboto_medium"
             android:textSize="18sp"
-            android:textStyle="bold"
             android:maxLines="2"
             android:ellipsize="end"
 
@@ -51,7 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="10 Merla house for rent. 6 rooms, 6 attach bathroom, 1 open kitchen with service kitchen, fully furniched house."
-            android:textColor="@color/secondary"
+            android:textColor="@color/secondary_text"
             android:maxLines="3"
             android:ellipsize="end"
             android:layout_marginTop="5dp"
@@ -68,8 +67,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Demand: "
-                android:textColor="@color/black"
-                android:fontFamily="@font/archivo"
+                android:textColor="@color/primary_text"
+                android:fontFamily="@font/roboto"
                 android:textStyle="bold"
                 android:textSize="16sp"
                 />
@@ -77,8 +76,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="PKR "
-                android:textColor="@color/black"
-                android:fontFamily="@font/archivo"
+                android:textColor="@color/accent"
+                android:fontFamily="@font/roboto"
                 android:textStyle="bold"
                 />
             <TextView
@@ -88,8 +87,8 @@
                 android:text="30000"
                 android:maxLines="1"
                 android:ellipsize="end"
-                android:textColor="@color/black"
-                android:fontFamily="@font/archivo"
+                android:textColor="@color/accent"
+                android:fontFamily="@font/roboto"
                 android:textStyle="bold"
                 />
 
@@ -100,8 +99,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:text="Location:"
-            android:textColor="@color/black"
-            android:fontFamily="@font/archivo"
+            android:textColor="@color/primary_text"
+            android:fontFamily="@font/roboto"
             android:textStyle="bold"
             android:textSize="16dp"
 
@@ -123,8 +122,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Behria Town Phase 2, Islamabad"
-                android:textColor="@color/black"
-                android:fontFamily="@font/archivo"
+                android:textColor="@color/primary_text"
+                android:fontFamily="@font/roboto"
                 />
 
     </LinearLayout>
@@ -138,8 +137,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Type: "
-                android:textColor="@color/black"
-                android:fontFamily="@font/archivo"
+                android:textColor="@color/primary_text"
+                android:fontFamily="@font/roboto"
                 android:textStyle="bold"
                 android:textSize="16sp"
                 />
@@ -148,8 +147,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=" Rent "
-                android:textColor="@color/black"
-                android:fontFamily="@font/archivo"
+                android:textColor="@color/accent"
+                android:fontFamily="@font/roboto"
                 android:textStyle="bold"
                 />
 

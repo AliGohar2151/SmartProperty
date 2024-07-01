@@ -74,7 +74,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
-                    android:textColor="@color/accent2"
+                    android:textColor="@color/accent"
                     android:hint="User Email" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -86,7 +86,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
-                    android:textColor="@color/accent2"
+                    android:textColor="@color/accent"
                     android:hint="Password" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -105,7 +105,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/accent2"
+                android:background="@color/accent"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="40dp"
                 android:layout_marginLeft="40dp"

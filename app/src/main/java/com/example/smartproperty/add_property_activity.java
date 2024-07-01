@@ -1,9 +1,12 @@
 package com.example.smartproperty;
 
+import static android.content.ContentValues.TAG;
+
 import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -35,8 +38,9 @@ import java.util.List;
 public class add_property_activity extends AppCompatActivity {
     private final int GALLERY_REQ_CODE=1000;
 
-    private ChipGroup purposeChipGroup, selectTypeChipGroup, homesTypeChipGroup, plotsTypeChipGroup, commercialTypeChipGroup;
-    private Chip buyChip, sellChip, homesChip, plotsChip, commercialChip, houseChip, roomChip, upperPortionChip, lowerPortionChip, flatChip, farmHouseChip, residentialPlotChip, commercialPlotChip, plotFileChip, agriculturalLandChip, industrialLandChip, officeChip, shopChip, warehouseChip, factoryChip, otherChip;
+    private ChipGroup homesTypeChipGroup;
+    private ChipGroup plotsTypeChipGroup;
+    private ChipGroup commercialTypeChipGroup;
     TextInputEditText cityEditText;
     bottomsheet_fragment bottomsheetFragment = new bottomsheet_fragment();
     MaterialSwitch installmentsSwitch;
@@ -44,12 +48,10 @@ public class add_property_activity extends AppCompatActivity {
     MaterialButton pickImage;
     ImageView imageGallery;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
+     //   EdgeToEdge.enable(this);
         setContentView(R.layout.activity_add_property);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -57,52 +59,43 @@ public class add_property_activity extends AppCompatActivity {
             return insets;
         });
 
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-            Window window = getWindow();
-            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-            window.setStatusBarColor(getResources().getColor(R.color.primary2));
-        }
-
         Toolbar navButton = findViewById(R.id.toolbar);
         navButton.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(add_property_activity.this, home_activity.class);
-                startActivity(intent);
+            public void onClick(View v) {;
                 finish();
             }
         });
 
         // Initialize ChipGroups
-        purposeChipGroup = findViewById(R.id.purpose_chip_group);
-        selectTypeChipGroup = findViewById(R.id.select_type_chip_group);
+        ChipGroup purposeChipGroup = findViewById(R.id.purpose_chip_group);
+        ChipGroup selectTypeChipGroup = findViewById(R.id.select_type_chip_group);
         homesTypeChipGroup = findViewById(R.id.homes_type_chip_group);
         plotsTypeChipGroup = findViewById(R.id.plots_type_chip_group);
         commercialTypeChipGroup = findViewById(R.id.commercial_type_chip_group);
 
         // Initialize Chips
-        buyChip = findViewById(R.id.rent_chip);
-        sellChip = findViewById(R.id.sell_chip);
-        homesChip = findViewById(R.id.homes_chip);
-        plotsChip = findViewById(R.id.plots_chip);
-        commercialChip = findViewById(R.id.commercial_chip);
-        houseChip = findViewById(R.id.house_chip);
-        roomChip = findViewById(R.id.room_chip);
-        upperPortionChip = findViewById(R.id.upperportion_chip);
-        lowerPortionChip = findViewById(R.id.lowerportion_chip);
-        flatChip = findViewById(R.id.flat_chip);
-        farmHouseChip = findViewById(R.id.farmhouse_chip);
-        residentialPlotChip = findViewById(R.id.residentialplot_chip);
-        commercialPlotChip = findViewById(R.id.commercialplot_chip);
-        plotFileChip = findViewById(R.id.plotfile_chip);
-        agriculturalLandChip = findViewById(R.id.agriculturalland_chip);
-        industrialLandChip = findViewById(R.id.industrialland_chip);
-        officeChip = findViewById(R.id.office_chip);
-        shopChip = findViewById(R.id.shop_chip);
-        warehouseChip = findViewById(R.id.warehouse_chip);
-        factoryChip = findViewById(R.id.factory_chip);
-        otherChip = findViewById(R.id.other_chip);
+        Chip buyChip = findViewById(R.id.rent_chip);
+        Chip sellChip = findViewById(R.id.sell_chip);
+        Chip homesChip = findViewById(R.id.homes_chip);
+        Chip plotsChip = findViewById(R.id.plots_chip);
+        Chip commercialChip = findViewById(R.id.commercial_chip);
+        Chip houseChip = findViewById(R.id.house_chip);
+        Chip roomChip = findViewById(R.id.room_chip);
+        Chip upperPortionChip = findViewById(R.id.upperportion_chip);
+        Chip lowerPortionChip = findViewById(R.id.lowerportion_chip);
+        Chip flatChip = findViewById(R.id.flat_chip);
+        Chip farmHouseChip = findViewById(R.id.farmhouse_chip);
+        Chip residentialPlotChip = findViewById(R.id.residentialplot_chip);
+        Chip commercialPlotChip = findViewById(R.id.commercialplot_chip);
+        Chip plotFileChip = findViewById(R.id.plotfile_chip);
+        Chip agriculturalLandChip = findViewById(R.id.agriculturalland_chip);
+        Chip industrialLandChip = findViewById(R.id.industrialland_chip);
+        Chip officeChip = findViewById(R.id.office_chip);
+        Chip shopChip = findViewById(R.id.shop_chip);
+        Chip warehouseChip = findViewById(R.id.warehouse_chip);
+        Chip factoryChip = findViewById(R.id.factory_chip);
+        Chip otherChip = findViewById(R.id.other_chip);
 
         cityEditText = findViewById(R.id.buttomsheet_button);
         installmentsSwitch=findViewById(R.id.installments_switch);

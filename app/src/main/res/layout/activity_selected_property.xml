@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".selected_property_activity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -17,10 +18,11 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/primary2"
+            android:background="@color/white"
             android:elevation="10dp"
             app:navigationIcon="@drawable/arrowback"
-            app:titleTextColor="@color/white"
+            app:titleTextColor="@color/primary_text"
+            app:navigationIconTint="@color/secondary"
             app:title="Property Details" />
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -60,73 +62,73 @@
             android:orientation="vertical"
             android:padding="16dp"
             >
+
             <TextView
                 android:id="@+id/txt_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
                 android:text="Historic Mansion with Landscaped Gardens"
+                android:textColor="@color/primary_text"
                 android:textSize="20sp"
-                android:fontFamily="@font/archivo"
-                android:textColor="@color/primary"
-                android:textStyle="bold"
-                />
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/txt_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Large villa featuring multiple bedrooms, garden, and swimming pool, 6 bed rooms with attache bathroom."
-                android:textSize="16sp"
-                android:fontFamily="@font/archivo"
-                android:textColor="@color/black"
                 android:layout_marginTop="5dp"
-                />
+                android:fontFamily="@font/roboto"
+                android:text="Large villa featuring multiple bedrooms, garden, and swimming pool, 6 bed rooms with attache bathroom."
+                android:textColor="@color/secondary_text"
+                android:textSize="16sp" />
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginTop="10dp"
                 >
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
                     android:text="Demand: "
                     android:textColor="@color/black"
-                    android:fontFamily="@font/archivo"
-                    android:textStyle="bold"
                     android:textSize="18sp"
-                    />
+                    android:textStyle="bold" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
                     android:text="PKR "
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/archivo"
-                    android:textStyle="bold"
+                    android:textColor="@color/accent"
                     android:textSize="16sp"
-                    />
+                    android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/txt_demand"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="30000"
-                    android:maxLines="1"
                     android:ellipsize="end"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/archivo"
-                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto"
+                    android:maxLines="1"
+                    android:text="30000"
+                    android:textColor="@color/accent"
                     android:textSize="16sp"
-                    />
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
+                android:fontFamily="@font/roboto"
                 android:text="Location:"
                 android:textColor="@color/black"
-                android:fontFamily="@font/archivo"
-                android:textStyle="bold"
                 android:textSize="18dp"
+                android:textStyle="bold"
 
                 />
             <LinearLayout
@@ -141,15 +143,15 @@
                     android:layout_height="20dp"
                     android:src="@drawable/locationicon"
                     />
+
                 <TextView
                     android:id="@+id/txt_location"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
                     android:text="Behria Town Phase 2, Islamabad"
                     android:textColor="@color/black"
-                    android:fontFamily="@font/archivo"
-                    android:textSize="16sp"
-                    />
+                    android:textSize="16sp" />
 
             </LinearLayout>
             <LinearLayout
@@ -158,25 +160,25 @@
                 android:orientation="horizontal"
                 android:layout_marginTop="5dp"
                 >
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
                     android:text="Type: "
                     android:textColor="@color/black"
-                    android:fontFamily="@font/archivo"
-                    android:textStyle="bold"
                     android:textSize="18sp"
-                    />
+                    android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/txt_type"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
                     android:text=" Rent "
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/archivo"
-                    android:textStyle="bold"
+                    android:textColor="@color/accent"
                     android:textSize="16sp"
-                    />
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <com.google.android.material.divider.MaterialDivider
@@ -191,43 +193,43 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 >
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
                     android:text="Property Type: "
                     android:textColor="@color/black"
-                    android:fontFamily="@font/archivo"
-                    android:textStyle="bold"
                     android:textSize="18sp"
-                    />
+                    android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/property_selected_type"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
                     android:text="Home"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/archivo"
-                    android:textStyle="bold"
+                    android:textColor="@color/accent"
                     android:textSize="16sp"
-                    />
+                    android:textStyle="bold" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:fontFamily="@font/roboto"
                     android:text=","
                     android:textColor="@color/black"
-                    android:fontFamily="@font/archivo"
-                    android:textStyle="bold"
                     android:textSize="16sp"
-                    android:layout_marginRight="5dp"
-                    />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/property_type"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/archivo"
+                    android:fontFamily="@font/roboto"
                     android:text="Upper Portion"
-                    android:textColor="@color/black"
+                    android:textColor="@color/accent"
                     android:textSize="16sp"
                     android:textStyle="normal" />
             </LinearLayout>
@@ -238,43 +240,43 @@
                 android:orientation="horizontal"
                 android:layout_marginTop="5dp"
                 >
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
                     android:text="Area: "
                     android:textColor="@color/black"
-                    android:fontFamily="@font/archivo"
-                    android:textStyle="bold"
                     android:textSize="18sp"
-                    />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/property_area"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/archivo"
+                    android:fontFamily="@font/roboto"
                     android:text="17.5"
-                    android:textColor="@color/black"
+                    android:textColor="@color/accent"
                     android:textSize="16sp"
                     android:textStyle="normal" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:fontFamily="@font/roboto"
                     android:text=","
                     android:textColor="@color/black"
-                    android:fontFamily="@font/archivo"
-                    android:textStyle="bold"
                     android:textSize="16sp"
-                    android:layout_marginRight="5dp"
-                    />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/property_area_type"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/archivo"
+                    android:fontFamily="@font/roboto"
                     android:text="Marla"
-                    android:textColor="@color/black"
+                    android:textColor="@color/accent"
                     android:textSize="16sp"
                     android:textStyle="normal" />
             </LinearLayout>
@@ -284,23 +286,23 @@
                 android:orientation="horizontal"
                 android:layout_marginTop="5dp"
                 >
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
                     android:text="No. of Rooms: "
                     android:textColor="@color/black"
-                    android:fontFamily="@font/archivo"
-                    android:textStyle="bold"
                     android:textSize="18sp"
-                    />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/rooms"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/archivo"
+                    android:fontFamily="@font/roboto"
                     android:text="09"
-                    android:textColor="@color/black"
+                    android:textColor="@color/accent"
                     android:textSize="16sp"
                     android:textStyle="normal" />
             </LinearLayout>
@@ -310,23 +312,23 @@
                 android:orientation="horizontal"
                 android:layout_marginTop="5dp"
                 >
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
                     android:text="No. of Bathrooms: "
                     android:textColor="@color/black"
-                    android:fontFamily="@font/archivo"
-                    android:textStyle="bold"
                     android:textSize="18sp"
-                    />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/bathrooms"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/archivo"
+                    android:fontFamily="@font/roboto"
                     android:text="02"
-                    android:textColor="@color/black"
+                    android:textColor="@color/accent"
                     android:textSize="16sp"
                     android:textStyle="normal" />
             </LinearLayout>
@@ -342,21 +344,21 @@
                 android:orientation="horizontal"
                 android:layout_marginTop="10dp"
                 >
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
                     android:text="Email: "
                     android:textColor="@color/black"
-                    android:fontFamily="@font/archivo"
-                    android:textStyle="bold"
                     android:textSize="18sp"
-                    />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/email"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/archivo"
+                    android:fontFamily="@font/roboto"
                     android:text="user123@gmail.com"
                     android:textColor="@color/black"
                     android:textSize="16sp"
@@ -397,16 +399,6 @@
                 android:layout_marginTop="20dp"
                 android:gravity="end">
 
-                <com.google.android.material.button.MaterialButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.Material3.Button.ElevatedButton"
-                    android:text="Message"
-                    app:icon="@drawable/messageicon"
-                    android:backgroundTint="@color/primary2"
-                    android:textColor="@color/primary"
-                    app:iconTint="@color/primary"
-                     />
 
                 <com.google.android.material.button.MaterialButton
                     android:layout_width="wrap_content"
@@ -414,11 +406,22 @@
                     style="@style/Widget.Material3.Button.ElevatedButton"
                     android:text="Call"
                     app:icon="@drawable/callicon"
-                    android:backgroundTint="@color/primary2"
+                    android:backgroundTint="@color/accent"
                     android:textColor="@color/white"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     app:iconTint="@color/white" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.Material3.Button.ElevatedButton"
+                    android:text="Message"
+                    app:icon="@drawable/messageicon"
+                    android:backgroundTint="@color/primary"
+                    android:textColor="@color/primary_text"
+                    app:iconTint="@color/secondary"
+                     />
 
 
             </LinearLayout>

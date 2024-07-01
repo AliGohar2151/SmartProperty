@@ -7,8 +7,6 @@
     android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".add_property_activity">
-
-
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,8 +23,6 @@
             android:background="@drawable/addproperty_background"
             app:collapsedTitleTextColor="@color/white"
             >
-
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="190dp"
@@ -34,50 +30,40 @@
                 android:paddingHorizontal="20dp"
                 >
 
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="70dp"
+                    android:fontFamily="@font/roboto_bold"
                     android:text="Post an Ad"
                     android:textColor="@color/white"
                     android:textSize="30sp"
-                    android:layout_marginTop="70dp"
-                    android:fontFamily="@font/archivo"
-                    android:textStyle="bold"
-                    />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto"
                     android:text="Reach Thousands of buyers\n around the country."
-                    android:textColor="@color/primary"
-                    android:textSize="16sp"
-                    android:fontFamily="@font/archivo"
-                    />
-
-
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
             </LinearLayout>
-
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="@color/primary2"
+                android:background="@color/secondary"
                 app:navigationIcon="@drawable/arrowback"
                 app:layout_collapseMode="pin"
                 />
-
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
-
-
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         >
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -104,38 +90,18 @@
                 android:id="@+id/rent_chip"
                 android:layout_height="50dp"
                 android:layout_width="wrap_content"
-                app:textStartPadding="15dp"
-                app:textEndPadding="15dp"
-                android:minWidth="80dp"
-                android:textAlignment="center"
-                style="@style/Widget.MaterialComponents.Chip.Choice"
-                android:text="Rent Out"
-                android:textColor="@color/chip_text_color"
-                android:textSize="16sp"
-                android:checkable="true"
-                app:chipStrokeColor="@color/chip_stroke_color"
-                app:chipStrokeWidth="1dp"
+                style="@style/customChipStyle"
                 android:checked="true"
-                app:chipBackgroundColor="@color/chip_backgroundcolor"
-                app:checkedIconVisible="false" />
+                android:text="Rent Out"
+                 />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/sell_chip"
                 android:layout_height="50dp"
                 android:layout_width="wrap_content"
-                app:textStartPadding="15dp"
-                app:textEndPadding="15dp"
-                android:minWidth="80dp"
-                android:textAlignment="center"
-                style="@style/Widget.MaterialComponents.Chip.Choice"
+                style="@style/customChipStyle"
                 android:text="Sell"
-                android:textColor="@color/chip_text_color"
-                android:textSize="16sp"
-                android:checkable="true"
-                app:chipBackgroundColor="@color/chip_backgroundcolor"
-                app:chipStrokeColor="@color/chip_stroke_color"
-                app:chipStrokeWidth="1dp"
-                app:checkedIconVisible="false" />
+                />
         </com.google.android.material.chip.ChipGroup>
 
         <com.google.android.material.divider.MaterialDivider
@@ -162,56 +128,24 @@
                 android:id="@+id/homes_chip"
                 android:layout_height="50dp"
                 android:layout_width="wrap_content"
-                app:textStartPadding="15dp"
-                app:textEndPadding="15dp"
-                android:minWidth="80dp"
-                android:textAlignment="center"
-                style="@style/Widget.MaterialComponents.Chip.Choice"
+                style="@style/customChipStyle"
                 android:text="Homes"
-                android:textColor="@color/chip_text_color"
-                android:textSize="16sp"
-                android:checkable="true"
-                app:chipStrokeColor="@color/chip_stroke_color"
-                app:chipStrokeWidth="1dp"
                 android:checked="true"
-                app:chipBackgroundColor="@color/chip_backgroundcolor"
-                app:checkedIconVisible="false" />
+                 />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/plots_chip"
                 android:layout_height="50dp"
                 android:layout_width="wrap_content"
-                app:textStartPadding="15dp"
-                app:textEndPadding="15dp"
-                android:minWidth="80dp"
-                android:textAlignment="center"
-                style="@style/Widget.MaterialComponents.Chip.Choice"
-                android:text="Plots"
-                android:textColor="@color/chip_text_color"
-                android:textSize="16sp"
-                android:checkable="true"
-                app:chipBackgroundColor="@color/chip_backgroundcolor"
-                app:chipStrokeColor="@color/chip_stroke_color"
-                app:chipStrokeWidth="1dp"
-                app:checkedIconVisible="false" />
+                style="@style/customChipStyle"
+                android:text="Plots" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/commercial_chip"
                 android:layout_height="50dp"
                 android:layout_width="wrap_content"
-                app:textStartPadding="15dp"
-                app:textEndPadding="15dp"
-                android:minWidth="80dp"
-                android:textAlignment="center"
-                style="@style/Widget.MaterialComponents.Chip.Choice"
-                android:text="Commercial"
-                android:textColor="@color/chip_text_color"
-                android:textSize="16sp"
-                android:checkable="true"
-                app:chipBackgroundColor="@color/chip_backgroundcolor"
-                app:chipStrokeColor="@color/chip_stroke_color"
-                app:chipStrokeWidth="1dp"
-                app:checkedIconVisible="false" />
+                style="@style/customChipStyle"
+                android:text="Commercial" />
         </com.google.android.material.chip.ChipGroup>
 
         <com.google.android.material.divider.MaterialDivider
@@ -235,118 +169,49 @@
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/house_chip"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:checkable="true"
-                    android:checked="true"
-                    android:minWidth="80dp"
+                    android:layout_width="wrap_content"
+                    style="@style/customChipStyle"
                     android:text="House"
-                    android:textAlignment="center"
-                    android:textColor="@color/chip_text_color"
-                    android:textSize="16sp"
-                    app:checkedIconVisible="false"
-                    app:chipBackgroundColor="@color/chip_backgroundcolor"
-                    app:chipStrokeColor="@color/chip_stroke_color"
-                    app:chipStrokeWidth="1dp"
-                    app:textEndPadding="15dp"
-                    app:textStartPadding="15dp" />
+                    android:checked="true"/>
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/room_chip"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:checkable="true"
-                    android:minWidth="80dp"
-                    android:text="Room"
-                    android:textAlignment="center"
-                    android:textColor="@color/chip_text_color"
-                    android:textSize="16sp"
-                    app:checkedIconVisible="false"
-                    app:chipBackgroundColor="@color/chip_backgroundcolor"
-                    app:chipStrokeColor="@color/chip_stroke_color"
-                    app:chipStrokeWidth="1dp"
-                    app:textEndPadding="15dp"
-                    app:textStartPadding="15dp" />
+                    android:layout_width="wrap_content"
+                    style="@style/customChipStyle"
+                    android:text="Room" />
 
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/upperportion_chip"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:checkable="true"
-                    android:minWidth="80dp"
-                    android:text="Upper Portion"
-                    android:textAlignment="center"
-                    android:textColor="@color/chip_text_color"
-                    android:textSize="16sp"
-                    app:checkedIconVisible="false"
-                    app:chipBackgroundColor="@color/chip_backgroundcolor"
-                    app:chipStrokeColor="@color/chip_stroke_color"
-                    app:chipStrokeWidth="1dp"
-                    app:textEndPadding="15dp"
-                    app:textStartPadding="15dp" />
-
+                    android:layout_width="wrap_content"
+                    style="@style/customChipStyle"
+                    android:text="Upper Portion" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/lowerportion_chip"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:checkable="true"
-                    android:minWidth="80dp"
-                    android:text="Lower Portion"
-                    android:textAlignment="center"
-                    android:textColor="@color/chip_text_color"
-                    android:textSize="16sp"
-                    app:checkedIconVisible="false"
-                    app:chipBackgroundColor="@color/chip_backgroundcolor"
-                    app:chipStrokeColor="@color/chip_stroke_color"
-                    app:chipStrokeWidth="1dp"
-                    app:textEndPadding="15dp"
-                    app:textStartPadding="15dp" />
+                    android:layout_width="wrap_content"
+                    style="@style/customChipStyle"
+                    android:text="Lower Portion" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/flat_chip"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:checkable="true"
-                    android:minWidth="80dp"
-                    android:text="Flat"
-                    android:textAlignment="center"
-                    android:textColor="@color/chip_text_color"
-                    android:textSize="16sp"
-                    app:checkedIconVisible="false"
-                    app:chipBackgroundColor="@color/chip_backgroundcolor"
-                    app:chipStrokeColor="@color/chip_stroke_color"
-                    app:chipStrokeWidth="1dp"
-                    app:textEndPadding="15dp"
-                    app:textStartPadding="15dp" />
+                    android:layout_width="wrap_content"
+                    style="@style/customChipStyle"
+                    android:text="Flat" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/farmhouse_chip"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:checkable="true"
-                    android:minWidth="80dp"
-                    android:text="Farm House"
-                    android:textAlignment="center"
-                    android:textColor="@color/chip_text_color"
-                    android:textSize="16sp"
-                    app:checkedIconVisible="false"
-                    app:chipBackgroundColor="@color/chip_backgroundcolor"
-                    app:chipStrokeColor="@color/chip_stroke_color"
-                    app:chipStrokeWidth="1dp"
-                    app:textEndPadding="15dp"
-                    app:textStartPadding="15dp" />
-
+                    android:layout_width="wrap_content"
+                    style="@style/customChipStyle"
+                    android:text="Farm House" />
 
             </com.google.android.material.chip.ChipGroup>
-
 
             <com.google.android.material.chip.ChipGroup
                 android:id="@+id/plots_type_chip_group"
@@ -359,96 +224,39 @@
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/residentialplot_chip"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:checkable="true"
-                    android:checked="true"
-                    android:minWidth="80dp"
+                    android:layout_width="wrap_content"
+                    style="@style/customChipStyle"
                     android:text="Residential"
-                    android:textAlignment="center"
-                    android:textColor="@color/chip_text_color"
-                    android:textSize="16sp"
-                    app:checkedIconVisible="false"
-                    app:chipBackgroundColor="@color/chip_backgroundcolor"
-                    app:chipStrokeColor="@color/chip_stroke_color"
-                    app:chipStrokeWidth="1dp"
-                    app:textEndPadding="15dp"
-                    app:textStartPadding="15dp" />
+                    />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/commercialplot_chip"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:checkable="true"
-                    android:minWidth="80dp"
-                    android:text="Commercial"
-                    android:textAlignment="center"
-                    android:textColor="@color/chip_text_color"
-                    android:textSize="16sp"
-                    app:checkedIconVisible="false"
-                    app:chipBackgroundColor="@color/chip_backgroundcolor"
-                    app:chipStrokeColor="@color/chip_stroke_color"
-                    app:chipStrokeWidth="1dp"
-                    app:textEndPadding="15dp"
-                    app:textStartPadding="15dp" />
+                    android:layout_width="wrap_content"
+                    style="@style/customChipStyle"
+                    android:text="Commercial" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/plotfile_chip"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:checkable="true"
-                    android:minWidth="80dp"
-                    android:text="Plot File"
-                    android:textAlignment="center"
-                    android:textColor="@color/chip_text_color"
-                    android:textSize="16sp"
-                    app:checkedIconVisible="false"
-                    app:chipBackgroundColor="@color/chip_backgroundcolor"
-                    app:chipStrokeColor="@color/chip_stroke_color"
-                    app:chipStrokeWidth="1dp"
-                    app:textEndPadding="15dp"
-                    app:textStartPadding="15dp" />
-
+                    android:layout_width="wrap_content"
+                    style="@style/customChipStyle"
+                    android:text="Plot File" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/agriculturalland_chip"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:checkable="true"
-                    android:minWidth="80dp"
-                    android:text="Agricultural Land"
-                    android:textAlignment="center"
-                    android:textColor="@color/chip_text_color"
-                    android:textSize="16sp"
-                    app:checkedIconVisible="false"
-                    app:chipBackgroundColor="@color/chip_backgroundcolor"
-                    app:chipStrokeColor="@color/chip_stroke_color"
-                    app:chipStrokeWidth="1dp"
-                    app:textEndPadding="15dp"
-                    app:textStartPadding="15dp" />
-
+                    android:layout_width="wrap_content"
+                    style="@style/customChipStyle"
+                    android:text="Agricultural Land" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/industrialland_chip"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:checkable="true"
-                    android:minWidth="80dp"
-                    android:text="Industrial Land"
-                    android:textAlignment="center"
-                    android:textColor="@color/chip_text_color"
-                    android:textSize="16sp"
-                    app:checkedIconVisible="false"
-                    app:chipBackgroundColor="@color/chip_backgroundcolor"
-                    app:chipStrokeColor="@color/chip_stroke_color"
-                    app:chipStrokeWidth="1dp"
-                    app:textEndPadding="15dp"
-                    app:textStartPadding="15dp" />
+                    android:layout_width="wrap_content"
+                    style="@style/customChipStyle"
+                    android:text="Industrial Land"                    />
             </com.google.android.material.chip.ChipGroup>
 
             <com.google.android.material.chip.ChipGroup
@@ -456,101 +264,46 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:visibility="gone"
                 app:chipSpacingVertical="-4dp"
+                android:visibility="gone"
                 app:singleSelection="true">
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/office_chip"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:checkable="true"
-                    android:checked="true"
-                    android:minWidth="80dp"
+                    android:layout_width="wrap_content"
+                    style="@style/customChipStyle"
                     android:text="Office"
-                    android:textAlignment="center"
-                    android:textColor="@color/chip_text_color"
-                    android:textSize="16sp"
-                    app:checkedIconVisible="false"
-                    app:chipBackgroundColor="@color/chip_backgroundcolor"
-                    app:chipStrokeColor="@color/chip_stroke_color"
-                    app:chipStrokeWidth="1dp"
-                    app:textEndPadding="15dp"
-                    app:textStartPadding="15dp" />
+
+                    />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/shop_chip"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:checkable="true"
-                    android:minWidth="80dp"
-                    android:text="Shop"
-                    android:textAlignment="center"
-                    android:textColor="@color/chip_text_color"
-                    android:textSize="16sp"
-                    app:checkedIconVisible="false"
-                    app:chipBackgroundColor="@color/chip_backgroundcolor"
-                    app:chipStrokeColor="@color/chip_stroke_color"
-                    app:chipStrokeWidth="1dp"
-                    app:textEndPadding="15dp"
-                    app:textStartPadding="15dp" />
+                    android:layout_width="wrap_content"
+                    style="@style/customChipStyle"
+                    android:text="Shop" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/warehouse_chip"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:checkable="true"
-                    android:minWidth="80dp"
-                    android:text="Ware House"
-                    android:textAlignment="center"
-                    android:textColor="@color/chip_text_color"
-                    android:textSize="16sp"
-                    app:checkedIconVisible="false"
-                    app:chipBackgroundColor="@color/chip_backgroundcolor"
-                    app:chipStrokeColor="@color/chip_stroke_color"
-                    app:chipStrokeWidth="1dp"
-                    app:textEndPadding="15dp"
-                    app:textStartPadding="15dp" />
-
+                    android:layout_width="wrap_content"
+                    style="@style/customChipStyle"
+                    android:text="Ware House" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/factory_chip"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:checkable="true"
-                    android:minWidth="80dp"
-                    android:text="Factory"
-                    android:textAlignment="center"
-                    android:textColor="@color/chip_text_color"
-                    android:textSize="16sp"
-                    app:checkedIconVisible="false"
-                    app:chipBackgroundColor="@color/chip_backgroundcolor"
-                    app:chipStrokeColor="@color/chip_stroke_color"
-                    app:chipStrokeWidth="1dp"
-                    app:textEndPadding="15dp"
-                    app:textStartPadding="15dp" />
+                    android:layout_width="wrap_content"
+                    style="@style/customChipStyle"
+                    android:text="Factory" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/other_chip"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:checkable="true"
-                    android:minWidth="80dp"
-                    android:text="Other"
-                    android:textAlignment="center"
-                    android:textColor="@color/chip_text_color"
-                    android:textSize="16sp"
-                    app:checkedIconVisible="false"
-                    app:chipBackgroundColor="@color/chip_backgroundcolor"
-                    app:chipStrokeColor="@color/chip_stroke_color"
-                    app:chipStrokeWidth="1dp"
-                    app:textEndPadding="15dp"
-                    app:textStartPadding="15dp" />
+                    android:layout_width="wrap_content"
+                    style="@style/customChipStyle"
+                    android:text="Other" />
 
             </com.google.android.material.chip.ChipGroup>
         </LinearLayout>
@@ -576,7 +329,6 @@
                 android:drawableEnd="@drawable/ic_arrowforward"
                 android:clickable="true"
                 android:focusable="false"
-                android:drawableTint="@color/primary"
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -631,6 +383,7 @@
                 app:boxStrokeColor="@color/edit_text_stroke"
                 style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                 android:hint="type"
+                app:endIconTint="@color/accent"
                 app:hintTextColor="@color/hint_stroke"
                 >
 
@@ -643,9 +396,7 @@
                      />
 
             </com.google.android.material.textfield.TextInputLayout>
-
         </LinearLayout>
-
         <com.google.android.material.divider.MaterialDivider
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -657,12 +408,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Installments"
+            android:fontFamily="@font/roboto"
             android:paddingStart="10dp"
+            android:text="Installments"
             android:textSize="16sp"
-            app:trackTint="@color/switch_color"
-            app:thumbTint="@color/primary"
-            />
+            app:thumbTint="@color/accent"
+            app:trackTint="@color/switch_color" />
 
         <LinearLayout
             android:id="@+id/installments_layout"
@@ -729,12 +480,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Ready for Possession"
+            android:checked="true"
+            android:fontFamily="@font/roboto"
             android:paddingStart="10dp"
+            android:text="Ready for Possession"
             android:textSize="16sp"
-            app:trackTint="@color/switch_color"
-            app:thumbTint="@color/primary"
-            />
+            app:thumbTint="@color/accent"
+            app:trackTint="@color/switch_color" />
 
 
         <com.google.android.material.divider.MaterialDivider
@@ -839,6 +591,7 @@
             app:counterEnabled="true"
             app:counterMaxLength="10"
             app:startIconDrawable="@drawable/callicon"
+            app:startIconTint="@color/accent"
             app:hintTextColor="@color/hint_stroke">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -864,8 +617,9 @@
             android:layout_marginTop="10dp"
             android:text="Select Images"
             style="@style/Widget.Material3.Button.ElevatedButton"
-            android:backgroundTint="@color/primary2"
-            android:textColor="@color/primary"
+            android:backgroundTint="@color/accent"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto"
             />
 
         <LinearLayout
@@ -897,31 +651,24 @@
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:backgroundTint="@color/primary2"
+                android:backgroundTint="@color/primary"
                 style="@style/Widget.Material3.Button.ElevatedButton"
                 android:text="Post AD"
-                app:strokeColor="@color/primary"
-                strokeWidth="1dp"
-                android:textColor="@color/primary" />
-            />
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/white" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Save as Draft"
                 android:textSize="18sp"
+                android:textColor="@color/accent"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="10dp"
-                android:fontFamily="@font/archivo"
+                android:fontFamily="@font/roboto"
                 />
 
         </RelativeLayout>
-
     </LinearLayout>
-
     </androidx.core.widget.NestedScrollView>
-
-
-
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

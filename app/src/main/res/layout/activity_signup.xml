@@ -72,9 +72,9 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:hint="User Name"
                     android:inputType="textPersonName"
-                    android:textColor="@color/accent2"
-                    android:hint="User Name" />
+                    android:textColor="@color/accent" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -85,9 +85,9 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:hint="User Email"
                     android:inputType="textEmailAddress"
-                    android:textColor="@color/accent2"
-                    android:hint="User Email" />
+                    android:textColor="@color/accent" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -98,7 +98,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
-                    android:textColor="@color/accent2"
+                    android:textColor="@color/accent"
                     android:hint="Password" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -117,7 +117,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/accent2"
+                android:background="@color/accent"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="40dp"
                 android:layout_marginStart="40dp"

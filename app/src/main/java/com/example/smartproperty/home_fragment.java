@@ -3,11 +3,13 @@ package com.example.smartproperty;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -69,7 +71,7 @@ public class home_fragment extends Fragment {
 
 
 
-        LinearLayout addPropertyButton = view.findViewById(R.id.add_property_button);
+        CardView addPropertyButton = view.findViewById(R.id.add_property_button);
         LinearLayout yourPropertyButton=view.findViewById(R.id.your_property_button);
 
         addPropertyButton.setOnClickListener(new View.OnClickListener() {

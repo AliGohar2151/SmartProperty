@@ -23,7 +23,6 @@ import org.imaginativeworld.whynotimagecarousel.model.CarouselItem;
 public class selected_property_activity extends AppCompatActivity {
 
     private TextView txtTitle,txtDescription,txtDemand, txtLocation, txtType, propertySelectedType, propertyType, propertyArea, propertyAreaType, rooms, bathrooms, email, phone;
-    private ImageView imagePlaceholder;
     private ImageCarousel imageCarousel;
 
 
@@ -37,12 +36,8 @@ public class selected_property_activity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-            Window window = getWindow();
-            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-            window.setStatusBarColor(getResources().getColor(R.color.primary2));
-        }
+
+
 
         MaterialToolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

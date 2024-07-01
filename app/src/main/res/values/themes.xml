@@ -1,9 +1,18 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.SmartProperty" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+            <item name="android:statusBarColor">@color/white</item>
     </style>
 
     <style name="Theme.SmartProperty" parent="Base.Theme.SmartProperty" />
+
+    <style name="Theme.lightTheme" parent="Base.Theme.SmartProperty">
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item> <!-- Dark icons on the project detail screen -->
+    </style>
+
+    <style name="Theme.darkTheme" parent="Base.Theme.SmartProperty">
+        <item name="android:statusBarColor">@color/secondary</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item> <!-- Dark icons on the project detail screen -->
+    </style>
 </resources>
