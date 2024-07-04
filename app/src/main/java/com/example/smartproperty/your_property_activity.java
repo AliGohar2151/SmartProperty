@@ -3,6 +3,7 @@ package com.example.smartproperty;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
@@ -13,6 +14,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.appbar.MaterialToolbar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,10 +40,19 @@ public class your_property_activity extends AppCompatActivity {
 
         propertyList = generateRandomProperties(5);
         adapter = new your_property_adapter(this, propertyList);
-
+        MaterialToolbar toolbar=findViewById(R.id.toolbar);
         recyclerView = findViewById(R.id.property_recycler_view); // Initialize recyclerView
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
+
+
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     private List<your_property_model> generateRandomProperties(int count){

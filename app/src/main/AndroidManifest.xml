@@ -16,6 +16,9 @@
         android:theme="@style/Theme.SmartProperty"
         tools:targetApi="31">
         <activity
+            android:name=".yourproperty_detail_activity"
+            android:exported="false" />
+        <activity
             android:name=".selected_property_activity"
             android:exported="false" />
         <activity
@@ -23,12 +26,12 @@
             android:exported="false" />
         <activity
             android:name=".add_property_activity"
-            android:theme="@style/Theme.darkTheme"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.darkTheme" />
         <activity
             android:name=".home_activity"
-            android:theme="@style/Theme.lightTheme"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.lightTheme" />
         <activity
             android:name=".signup_activity"
             android:exported="false" />

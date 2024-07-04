@@ -48,7 +48,7 @@ public class your_property_adapter extends RecyclerView.Adapter<your_property_ad
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(context,selected_property_activity.class);
+                Intent intent=new Intent(context,yourproperty_detail_activity.class);
                 intent.putExtra("title",property.getTitle());
                 intent.putExtra("description",property.getDescription());
                 intent.putExtra("demand",property.getDemand());

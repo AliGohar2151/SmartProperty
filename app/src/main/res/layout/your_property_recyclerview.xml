@@ -6,6 +6,7 @@
     android:orientation="vertical"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
+    android:backgroundTint="@color/white"
     android:paddingTop="5dp"
     android:paddingBottom="5dp"
     >
@@ -176,6 +177,7 @@
             android:layout_weight="1"
             android:textColor="@color/white"
             android:backgroundTint="@color/primary"
+            app:icon="@drawable/editicon"
             />
         <Button
             android:id="@+id/delete_button"
@@ -187,6 +189,9 @@
             android:textColor="@color/white"
             android:backgroundTint="@color/accent"
             android:layout_marginStart="10dp"
+            app:icon="@drawable/deleteicon"
+            app:iconTint="@color/white"
+
             />
     </LinearLayout>
 

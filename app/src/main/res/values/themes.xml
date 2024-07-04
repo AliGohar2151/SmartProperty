@@ -13,6 +13,6 @@
 
     <style name="Theme.darkTheme" parent="Base.Theme.SmartProperty">
         <item name="android:statusBarColor">@color/secondary</item>
-        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item> <!-- Dark icons on the project detail screen -->
-    </style>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+            </style>
 </resources>
