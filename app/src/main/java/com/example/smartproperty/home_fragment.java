@@ -55,6 +55,7 @@ public class home_fragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
@@ -85,7 +86,7 @@ public class home_fragment extends Fragment {
         yourPropertyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(),selected_property_activity.class);
+                Intent intent = new Intent(getActivity(), your_property_activity.class);
                 startActivity(intent);
             }
         });

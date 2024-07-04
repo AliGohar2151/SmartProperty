@@ -1,72 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
+    android:id="@+id/yourPropertyMain"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".your_property_activity">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
 
-        <com.google.android.material.appbar.CollapsingToolbarLayout
+        >
+
+
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
-            app:title="Post an Ad"
-            app:expandedTitleTextColor="#00FFFFFF"
-            app:contentScrim="@color/primary2"
-            android:background="@drawable/addproperty_background"
-            android:elevation="10dp"
-            app:collapsedTitleTextColor="@color/white"
-           >
-
-
-            <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="190dp"
-                android:orientation="vertical"
-                android:paddingHorizontal="20dp"
-                >
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Your\nListings"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="30sp"
+                android:textColor="@color/primary_text"
 
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Post an Ad"
-                    android:textColor="@color/white"
-                    android:textSize="30sp"
-                    android:layout_marginTop="70dp"
-                    android:fontFamily="@font/archivo"
-                    android:textStyle="bold"
                 />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="Reach Thousands of buyers\n around the country."
-                    android:textColor="@color/primary"
-                    android:textSize="16sp"
-                    android:fontFamily="@font/archivo"
-                    />
-
-
-            </LinearLayout>
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/property_recycler_view"
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:background="@color/primary2"
-                app:navigationIcon="@drawable/arrowback"
-                app:layout_collapseMode="pin"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/your_property_recyclerview"
+
                 />
-
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
-    </com.google.android.material.appbar.AppBarLayout>
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

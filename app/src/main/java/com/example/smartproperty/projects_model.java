@@ -8,6 +8,7 @@ public class projects_model {
     private String location;
     private String type;
 
+
     public projects_model(String title, String description, int imageResId, String demand, String location,String type) {
         this.title = title;
         this.description = description;

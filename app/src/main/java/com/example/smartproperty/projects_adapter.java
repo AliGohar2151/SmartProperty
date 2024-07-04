@@ -80,4 +80,6 @@ public class projects_adapter extends RecyclerView.Adapter<projects_adapter.proj
 
         }
     }
+
+
 }
