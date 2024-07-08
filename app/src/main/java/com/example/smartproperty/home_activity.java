@@ -58,6 +58,28 @@ public class home_activity extends AppCompatActivity {
                 Intent intent = new Intent(home_activity.this, add_property_activity.class);
                 startActivity(intent);
                 return true;
+            }else if (itemId == R.id.nav_yourproperty) {
+                Intent intent = new Intent(home_activity.this, your_property_activity.class);
+                startActivity(intent);
+                return true;
+            }
+            else if (itemId == R.id.nav_agents) {
+                Intent intent = new Intent(home_activity.this, findAgents_activity.class);
+                startActivity(intent);
+                return true;
+            } else if (itemId==R.id.nav_search) {
+                fragment = new search_fragment();
+                bottomNavigationView.setSelectedItemId(R.id.bottom_nav_search);
+            } else if (itemId==R.id.nav_favourite) {
+                fragment = new favourite_fragment();
+                bottomNavigationView.setSelectedItemId(R.id.bottom_nav_favourite);
+            } else if (itemId==R.id.nav_profile) {
+                fragment = new profile_fragment();
+                bottomNavigationView.setSelectedItemId(R.id.bottom_nav_profile);
+
+            } else if (itemId==R.id.nav_draft) {
+                Intent intent = new Intent(home_activity.this, drafts_activity.class);
+                startActivity(intent);
             }
 
             if (fragment != null) {
@@ -79,6 +101,16 @@ public class home_activity extends AppCompatActivity {
             } else if (itemId == R.id.bottom_nav_projects) {
                 fragment = new projects_fragment();
                 navigationView.setCheckedItem(R.id.nav_projects);
+            } else if (itemId==R.id.bottom_nav_search) {
+                fragment=new search_fragment();
+                navigationView.setCheckedItem(R.id.nav_search);
+            }
+            else if (itemId == R.id.bottom_nav_favourite) {
+                fragment = new favourite_fragment();
+                navigationView.setCheckedItem(R.id.nav_favourite);
+            } else if (itemId==R.id.bottom_nav_profile) {
+                fragment=new profile_fragment();
+                navigationView.setCheckedItem(R.id.nav_profile);
             }
 
             if (fragment != null) {
@@ -112,6 +144,13 @@ public class home_activity extends AppCompatActivity {
             navigationView.setCheckedItem(R.id.nav_home);
         } else if (selectedItemId == R.id.bottom_nav_projects) {
             navigationView.setCheckedItem(R.id.nav_projects);
+        } else if (selectedItemId==R.id.bottom_nav_search) {
+            navigationView.setCheckedItem(R.id.nav_search);
+        } else if (selectedItemId==R.id.bottom_nav_favourite) {
+            navigationView.setCheckedItem(R.id.nav_favourite);
+        } else if (selectedItemId==R.id.bottom_nav_profile) {
+            navigationView.setCheckedItem(R.id.nav_profile);
+
         } else {
             navigationView.setCheckedItem(R.id.nav_home);
         }

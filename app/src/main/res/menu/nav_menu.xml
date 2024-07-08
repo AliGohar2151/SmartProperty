@@ -1,28 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-tools:showIn="navigation_view"    >
+    tools:showIn="navigation_view">
     <item
         android:id="@+id/nav_home"
         android:checkable="true"
-        android:title="Home"
         android:icon="@drawable/ic_homeicon"
+        android:title="Home"
 
         />
     <item
         android:id="@+id/nav_projects"
         android:checkable="true"
-        android:title="Projects"
         android:icon="@drawable/ic_projects"
-        />
+        android:title="Properties" />
     <item
         android:id="@+id/nav_addproperty"
         android:checkable="true"
-        android:title="Add Property"
         android:icon="@drawable/ic_addpropertyicon"
-        />
+        android:title="Add Property" />
     <item
+        android:id="@+id/nav_yourproperty"
         android:checkable="true"
-        android:title="FAQS"
+        android:icon="@drawable/ic_yourpropertyicon"
+        android:title="Your Property" />
+    <item
+        android:id="@+id/nav_agents"
+        android:checkable="true"
+        android:icon="@drawable/ic_agenticon"
+        android:title="Find Agents" />
+    <item
+        android:id="@+id/nav_favourite"
+        android:checkable="true"
+        android:icon="@drawable/ic_favoritesicon"
+        android:title="Favorites"
+
         />
+
+    <item
+        android:id="@+id/nav_search"
+        android:checkable="true"
+        android:icon="@drawable/searchicon"
+        android:title="Search" />
+
+    <item
+        android:id="@+id/nav_draft"
+        android:icon="@drawable/drafticon_outlined"
+        android:title="Drafts" />
+
+
+    <item android:title="APP CONTROLS">
+
+        <menu>
+            <item
+                android:id="@+id/nav_profile"
+                android:checkable="true"
+                android:icon="@drawable/ic_profileicon"
+                android:title="Profile" />
+
+            <item
+                android:id="@+id/nav_settings"
+                android:checkable="true"
+                android:icon="@drawable/ic_settingicon"
+                android:title="Settings" />
+        </menu>
+    </item>
+
 </menu>

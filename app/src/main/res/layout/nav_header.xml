@@ -10,12 +10,12 @@
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:src="@drawable/placeholder"
+        android:src="@drawable/profilepic"
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="User Name ??"
+        android:text="Raja Shahab Haider"
         android:textSize="25sp"
         android:textColor="@color/white"
         android:fontFamily="@font/roboto_bold"

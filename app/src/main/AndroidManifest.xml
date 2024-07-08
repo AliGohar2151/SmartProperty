@@ -16,6 +16,15 @@
         android:theme="@style/Theme.SmartProperty"
         tools:targetApi="31">
         <activity
+            android:name=".settings_activity"
+            android:exported="false" />
+        <activity
+            android:name=".drafts_activity"
+            android:exported="false" />
+        <activity
+            android:name=".findAgents_activity"
+            android:exported="false" />
+        <activity
             android:name=".yourproperty_detail_activity"
             android:exported="false" />
         <activity

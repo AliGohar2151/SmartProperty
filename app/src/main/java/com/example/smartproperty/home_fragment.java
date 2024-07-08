@@ -5,6 +5,8 @@ import android.os.Bundle;
 
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -69,11 +71,9 @@ public class home_fragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home_fragment, container, false);
 
-
-
-
         CardView addPropertyButton = view.findViewById(R.id.add_property_button);
         LinearLayout yourPropertyButton=view.findViewById(R.id.your_property_button);
+        CardView findAgentButton=view.findViewById(R.id.find_agent_button);
 
         addPropertyButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,6 +90,21 @@ public class home_fragment extends Fragment {
                 startActivity(intent);
             }
         });
+
+        findAgentButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), findAgents_activity.class);
+                startActivity(intent);
+            }
+        });
+
+        FragmentManager fragmentManager = getChildFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        recentlisting_fragment recentListingFragment = recentlisting_fragment.newInstance("param1", "param2");
+        fragmentTransaction.replace(R.id.recent_listing_fragment, recentListingFragment);
+        fragmentTransaction.commit();
+
 
         return view;
     }

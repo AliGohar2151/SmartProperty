@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".search_fragment">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Filters"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="30sp"
+                android:layout_marginTop="10dp"
+
+                />
+
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I want to "
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/black" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/buyrent_chip_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_rent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rent"
+                    android:checked="true"
+                    style="@style/customChipStyle" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_buy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Buy"
+                    style="@style/customChipStyle" />
+
+
+            </com.google.android.material.chip.ChipGroup>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Property Type"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/black" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chip_group_property_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Home"
+                    android:checked="true"
+                    style="@style/customChipStyle" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_plot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Plot"
+                    style="@style/customChipStyle" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_commercial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Commercial"
+                    style="@style/customChipStyle" />
+            </com.google.android.material.chip.ChipGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/homes_type_chip_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:visibility="visible"
+                    app:chipSpacingVertical="-4dp"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/house_chip"
+                        android:layout_height="50dp"
+                        android:layout_width="wrap_content"
+                        style="@style/customChipStyle"
+                        android:text="House"
+                        android:checked="true"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/room_chip"
+                        android:layout_height="50dp"
+                        android:layout_width="wrap_content"
+                        style="@style/customChipStyle"
+                        android:text="Room" />
+
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/upperportion_chip"
+                        android:layout_height="50dp"
+                        android:layout_width="wrap_content"
+                        style="@style/customChipStyle"
+                        android:text="Upper Portion" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/lowerportion_chip"
+                        android:layout_height="50dp"
+                        android:layout_width="wrap_content"
+                        style="@style/customChipStyle"
+                        android:text="Lower Portion" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/flat_chip"
+                        android:layout_height="50dp"
+                        android:layout_width="wrap_content"
+                        style="@style/customChipStyle"
+                        android:text="Flat" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/farmhouse_chip"
+                        android:layout_height="50dp"
+                        android:layout_width="wrap_content"
+                        style="@style/customChipStyle"
+                        android:text="Farm House" />
+
+                </com.google.android.material.chip.ChipGroup>
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/plots_type_chip_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:visibility="gone"
+                    app:chipSpacingVertical="-4dp"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/residentialplot_chip"
+                        android:layout_height="50dp"
+                        android:layout_width="wrap_content"
+                        style="@style/customChipStyle"
+                        android:text="Residential"
+                        />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/commercialplot_chip"
+                        android:layout_height="50dp"
+                        android:layout_width="wrap_content"
+                        style="@style/customChipStyle"
+                        android:text="Commercial" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/plotfile_chip"
+                        android:layout_height="50dp"
+                        android:layout_width="wrap_content"
+                        style="@style/customChipStyle"
+                        android:text="Plot File" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/agriculturalland_chip"
+                        android:layout_height="50dp"
+                        android:layout_width="wrap_content"
+                        style="@style/customChipStyle"
+                        android:text="Agricultural Land" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/industrialland_chip"
+                        android:layout_height="50dp"
+                        android:layout_width="wrap_content"
+                        style="@style/customChipStyle"
+                        android:text="Industrial Land"                    />
+                </com.google.android.material.chip.ChipGroup>
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/commercial_type_chip_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    app:chipSpacingVertical="-4dp"
+                    android:visibility="gone"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/office_chip"
+                        android:layout_height="50dp"
+                        android:layout_width="wrap_content"
+                        style="@style/customChipStyle"
+                        android:text="Office"
+
+                        />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/shop_chip"
+                        android:layout_height="50dp"
+                        android:layout_width="wrap_content"
+                        style="@style/customChipStyle"
+                        android:text="Shop" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/warehouse_chip"
+                        android:layout_height="50dp"
+                        android:layout_width="wrap_content"
+                        style="@style/customChipStyle"
+                        android:text="Ware House" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/factory_chip"
+                        android:layout_height="50dp"
+                        android:layout_width="wrap_content"
+                        style="@style/customChipStyle"
+                        android:text="Factory" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/other_chip"
+                        android:layout_height="50dp"
+                        android:layout_width="wrap_content"
+                        style="@style/customChipStyle"
+                        android:text="Other" />
+
+                </com.google.android.material.chip.ChipGroup>
+            </LinearLayout>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               android:layout_margin="10dp"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="City"
+                app:boxStrokeColor="@color/edit_text_stroke"
+                app:hintTextColor="@color/hint_stroke"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/buttomsheet_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/primary"
+                    android:drawableEnd="@drawable/ic_arrowforward"
+                    android:clickable="true"
+                    android:textStyle="bold"
+                    android:focusable="false"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Location Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:hint="Location"
+                app:hintTextColor="@color/hint_stroke"
+                app:boxStrokeColor="@color/edit_text_stroke"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price Range"
+                android:textSize="18sp"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:hintTextColor="@color/hint_stroke"
+                    app:boxStrokeColor="@color/edit_text_stroke"
+                    android:layout_marginEnd="8dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/input_min_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Min Price"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:hintTextColor="@color/hint_stroke"
+                    app:boxStrokeColor="@color/edit_text_stroke"
+                    android:layout_marginStart="8dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/input_max_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Max Price"
+                        android:imeOptions="actionDone"
+
+                        android:inputType="numberDecimal"
+ />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Area Type"
+                android:textSize="18sp"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/black" />
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:boxStrokeColor="@color/edit_text_stroke"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:hint="Type"
+                android:layout_marginTop="5dp"
+                app:endIconTint="@color/accent"
+                app:hintTextColor="@color/hint_stroke"
+                >
+
+                <AutoCompleteTextView
+                    android:id="@+id/input_area_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:simpleItems="@array/area_size"
+                    android:focusable="false"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Area Range"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:hintTextColor="@color/hint_stroke"
+                    app:boxStrokeColor="@color/edit_text_stroke"
+                    android:layout_marginEnd="8dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/input_min_area"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Min Area"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:hintTextColor="@color/hint_stroke"
+                    app:boxStrokeColor="@color/edit_text_stroke"
+                    android:layout_marginStart="8dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/input_max_area"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Max Area"
+                        imeOptions="actionDone"
+                        android:inputType="numberDecimal"
+/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                />
+
+            <!-- Number of Bedrooms -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Number of Bedrooms"
+                android:textSize="18sp"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/black" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chip_group_bedrooms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_1_bed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:checked="true"
+                    style="@style/customChipStyle" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_2_beds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    style="@style/customChipStyle" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_3_beds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    style="@style/customChipStyle" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_4_beds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4"
+                    style="@style/customChipStyle" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_5_beds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5+"
+                    style="@style/customChipStyle" />
+            </com.google.android.material.chip.ChipGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Number of Bathrooms"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/black" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chip_group_bbathrooms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_1_bath"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:checked="true"
+                    style="@style/customChipStyle" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_2_bath"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    style="@style/customChipStyle" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_3_bath"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    style="@style/customChipStyle" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_4_bath"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4"
+                    style="@style/customChipStyle" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_5_bath"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5+"
+                    style="@style/customChipStyle" />
+            </com.google.android.material.chip.ChipGroup>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                />
+            <!-- Search Button -->
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.Material3.Button.ElevatedButton"
+                android:id="@+id/button_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search"
+                android:layout_gravity="end"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/secondary"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

@@ -4,6 +4,7 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="looking_to_sell_or_rent_out_your_property">Looking to sell or rent out your property?</string>
     <string-array name="pakistani_cities">
         <item>Karachi</item>
         <item>Lahore</item>

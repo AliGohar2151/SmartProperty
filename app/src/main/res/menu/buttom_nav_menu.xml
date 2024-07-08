@@ -14,18 +14,22 @@
 
         />
     <item
-        android:title="Home"
-        android:icon="@drawable/homeicon"
+        android:id="@+id/bottom_nav_search"
+        android:title="Search"
+        android:icon="@drawable/searchicon"
 
         />
     <item
-        android:title="Home"
-        android:icon="@drawable/homeicon"
+        android:id="@+id/bottom_nav_favourite"
+        android:title="Favorite"
+        android:icon="@drawable/ic_favoritesicon"
 
         />
     <item
-        android:title="Home"
-        android:icon="@drawable/homeicon"
+
+        android:id="@+id/bottom_nav_profile"
+        android:title="Profile"
+        android:icon="@drawable/ic_profileicon"
 
         />
 </menu>
