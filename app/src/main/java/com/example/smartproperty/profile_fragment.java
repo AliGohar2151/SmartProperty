@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -34,6 +35,7 @@ public class profile_fragment extends Fragment {
     private CardView cardMyProperties;
     private CardView cardDrafts;
     private CardView cardAddProperty;
+    private LinearLayout contactUsLayout,feedBackLayout,termLayout,supportLayout,logoutLayout;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -82,6 +84,11 @@ public class profile_fragment extends Fragment {
         cardMyProperties = view.findViewById(R.id.card_my_properties);
         cardDrafts = view.findViewById(R.id.card_drafts);
         cardAddProperty = view.findViewById(R.id.card_add_property);
+        contactUsLayout=view.findViewById(R.id.contact_us_layout);
+        feedBackLayout=view.findViewById(R.id.feedback_layout);
+        termLayout=view.findViewById(R.id.term_layout);
+        supportLayout=view.findViewById(R.id.support_layout);
+        logoutLayout=view.findViewById(R.id.logout_layout);
 
 
         cardDrafts.setOnClickListener(new View.OnClickListener() {
@@ -122,6 +129,48 @@ public class profile_fragment extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(),settings_activity.class);
                 startActivity(intent);
+            }
+        });
+
+
+        contactUsLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialPhoneNumber dialPhoneNumber = new DialPhoneNumber(getContext());
+                dialPhoneNumber.dialNumber();
+            }
+        });
+
+        feedBackLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(), feedback_activity.class);
+                startActivity(intent);
+            }
+        });
+
+        termLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(), terms_privacy_activity.class);
+                startActivity(intent);
+            }
+        });
+
+        supportLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(), support_help_activity.class);
+                startActivity(intent);
+            }
+        });
+
+        logoutLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(), intro_activity.class);
+                startActivity(intent);
+                getActivity().finish();
             }
         });
 

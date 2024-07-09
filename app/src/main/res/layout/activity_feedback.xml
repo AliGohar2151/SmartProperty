@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/yourPropertyMain"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white"
-    tools:context=".your_property_activity">
-
-
+    tools:context=".feedback_activity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -22,7 +20,7 @@
             app:contentScrim="@color/white"
             app:expandedTitleTextColor="@color/transparent"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            app:title="Your Listing">
+            app:title="FeedBack Hub">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -35,12 +33,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="75dp"
+                    android:layout_marginTop="70dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="Your\nListing"
+                    android:text="FeedBack Hub"
                     android:textColor="@color/primary_text"
                     android:textSize="30sp" />
-
 
             </LinearLayout>
 
@@ -54,29 +51,68 @@
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
-
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
 
         >
-
-
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:padding="16dp"
             >
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/property_recycler_view"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                tools:listitem="@layout/your_property_recyclerview"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/please_give_us_your_feedback_your_opinion_means_a_lot_to_us"
+                android:fontFamily="@font/roboto_light"
+                android:layout_marginBottom="10dp"
 
                 />
+            <EditText
+                android:id="@+id/input_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="200dp"
+                android:background="@drawable/edittext_background"
+                android:elevation="10dp"
+                android:layout_margin="20dp"
+                android:inputType="textMultiLine"
+                android:padding="10dp"
+                android:gravity="top|start"
+                />
+
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:progressTint="@color/accent"
+                android:progressBackgroundTint="@color/accent_light"
+                android:rating="3"
+                />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/submit_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.Material3.Button.ElevatedButton"
+                android:layout_gravity="center_horizontal"
+                android:text="Submit"
+                android:minWidth="90dp"
+                android:backgroundTint="@color/accent"
+                android:textColor="@color/white"
+                android:elevation="10dp"
+                android:layout_marginTop="20dp"
+                />
+
+
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
+
+
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

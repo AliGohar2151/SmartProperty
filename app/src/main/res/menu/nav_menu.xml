@@ -16,18 +16,15 @@
         android:title="Properties" />
     <item
         android:id="@+id/nav_addproperty"
-        android:checkable="true"
-        android:icon="@drawable/ic_addpropertyicon"
+        android:icon="@drawable/addpropertyoutlined"
         android:title="Add Property" />
     <item
         android:id="@+id/nav_yourproperty"
-        android:checkable="true"
-        android:icon="@drawable/ic_yourpropertyicon"
+        android:icon="@drawable/yourpropertyicon_outlined"
         android:title="Your Property" />
     <item
         android:id="@+id/nav_agents"
-        android:checkable="true"
-        android:icon="@drawable/ic_agenticon"
+        android:icon="@drawable/agenticon_outlined"
         android:title="Find Agents" />
     <item
         android:id="@+id/nav_favourite"
@@ -49,6 +46,7 @@
         android:title="Drafts" />
 
 
+
     <item android:title="APP CONTROLS">
 
         <menu>
@@ -60,9 +58,38 @@
 
             <item
                 android:id="@+id/nav_settings"
-                android:checkable="true"
-                android:icon="@drawable/ic_settingicon"
+                android:icon="@drawable/settingicon_outlined"
                 android:title="Settings" />
+            <item
+                android:id="@+id/nav_about_us"
+                android:title="About Us"
+                android:icon="@drawable/ic_detail"
+                />
+            <item
+                android:id="@+id/nav_contact_us"
+                android:title="Contact Us"
+                android:icon="@drawable/ic_contact"
+                />
+            <item
+                android:id="@+id/nav_feedback"
+                android:title="Feedback Hub"
+                android:icon="@drawable/ic_feedback"
+                />
+            <item android:id="@+id/nav_terms"
+                android:title="Terms and Privacy Policy"
+                android:icon="@drawable/ic_terms"
+                />
+
+            <item android:id="@+id/nav_support"
+                android:title="Support and Help"
+                android:icon="@drawable/ic_support"
+                />
+            <item
+                android:id="@+id/nav_logout"
+                android:title="Logout"
+                android:icon="@drawable/ic_logout"
+                />
+
         </menu>
     </item>
 

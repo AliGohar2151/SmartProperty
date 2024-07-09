@@ -1,56 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:background="@color/white"
+    android:orientation="vertical"
     tools:context=".login_activity">
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="match_parent"
-        android:layout_height="218dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/background" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="200dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:ellipsize="end"
-        android:fontFamily="@font/archivo"
+        android:fontFamily="@font/roboto_bold"
         android:maxLines="2"
-        android:text="Welcome Back!"
-        android:textColor="#FFFFFF"
+        android:text="Welcome\nBack!"
+        android:textColor="@color/primary_text"
         android:textSize="35sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView5"
-        app:layout_constraintVertical_bias="0.251" />
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="40dp"
+   />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:elevation="8dp"
         android:layout_margin="16dp"
         app:cardCornerRadius="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5">
+>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
+            android:background="@color/background"
             android:gravity="center"
             android:padding="16dp">
 
@@ -58,9 +47,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Login Here"
-                android:fontFamily="@font/archivo_medium"
+                android:fontFamily="@font/roboto_bold"
                 android:textStyle="bold"
-                android:textColor="@color/primary"
+                android:textColor="@color/primary_text"
                 android:textSize="30sp"
                 android:layout_marginBottom="30dp"
                 />
@@ -68,38 +57,45 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp">
+                android:layout_marginBottom="10dp"
+                app:boxStrokeColor="@color/edit_text_stroke"
+                app:hintTextColor="@color/hint_stroke"
+                android:hint="User Email"
+                >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
-                    android:textColor="@color/accent"
-                    android:hint="User Email" />
+                    />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/edit_text_stroke"
+                app:hintTextColor="@color/hint_stroke"
+                android:hint="Password"
+                >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
                     android:textColor="@color/accent"
-                    android:hint="Password" />
+                     />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/login_button"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 app:backgroundTint="@color/primary"
                 style="@style/Widget.Material3.Button.ElevatedButton"
                 android:layout_marginTop="30dp"
                 android:text="Login"
                 android:textSize="20sp"
-                android:fontFamily="@font/archivo"
+                android:fontFamily="@font/roboto_light"
                 android:textColor="@color/white" />
 
             <View
@@ -128,7 +124,7 @@
                     app:backgroundTint="#28B346"
                     android:text="Google"
                     android:textSize="15sp"
-                    android:fontFamily="@font/archivo"
+                    android:fontFamily="@font/roboto_light"
                     android:textColor="@color/white"
                     android:layout_marginEnd="5dp"
                     app:cornerRadius="30dp" />
@@ -143,7 +139,7 @@
                     app:backgroundTint="#3D6AD5"
                     android:text="Facebook"
                     android:textSize="15sp"
-                    android:fontFamily="@font/archivo"
+                    android:fontFamily="@font/roboto_light"
                     android:textColor="@color/white"
                     android:layout_marginStart="5dp"
                     app:cornerRadius="30dp" />
@@ -154,4 +150,4 @@
 
     </androidx.cardview.widget.CardView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

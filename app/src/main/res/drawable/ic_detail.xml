@@ -14,11 +14,11 @@
       android:fillColor="#FF000000"
       android:strokeColor="#FF000000"
       android:strokeWidth="2"
-      android:pathData="M23,16h2v20h-2z"/>
+      android:pathData="M23,18h2v20h-2z"/>
 
   <path
       android:fillColor="#FF000000"
       android:strokeColor="#FF000000"
       android:strokeWidth="2"
-      android:pathData="M23,12h2v2h-2z"/>
+      android:pathData="M23,10h2v4h-2z"/>
 </vector>

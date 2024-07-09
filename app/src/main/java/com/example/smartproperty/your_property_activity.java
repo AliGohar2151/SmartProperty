@@ -9,6 +9,7 @@ import android.view.WindowManager;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -41,7 +42,7 @@ public class your_property_activity extends AppCompatActivity {
 
         propertyList = generateRandomProperties(5);
         adapter = new your_property_adapter(this, propertyList);
-        MaterialToolbar toolbar=findViewById(R.id.toolbar);
+        Toolbar toolbar=findViewById(R.id.toolbar);
         recyclerView = findViewById(R.id.property_recycler_view); // Initialize recyclerView
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);

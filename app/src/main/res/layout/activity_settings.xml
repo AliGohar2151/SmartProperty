@@ -35,18 +35,9 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="70dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="Profile Settings"
+                    android:text="Profile\nSettings"
                     android:textColor="@color/primary_text"
                     android:textSize="30sp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/roboto_medium"
-                    android:text="Edit Your Profile"
-                    android:textColor="@color/secondary_text"
-                    android:textSize="16sp" />
 
             </LinearLayout>
 
